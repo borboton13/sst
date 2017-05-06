@@ -1,0 +1,27 @@
+<h1>Listings Users</h1>
+<table id="table_crud" border=1>
+  <tr>
+    <th>Login</th>
+    <th>e-Mail</th>
+  </tr>
+  <% for user in @users -%>
+  <tr id="<%= user.id %>">
+    <td><%= user.login %></td>
+    <td><%= user.email %></td>
+  </tr>
+  <% end -%>
+</table>
+
+<form autocomplete="off">
+	<ul class="first acfb-holder">
+		<li class="acfb-data"><span>Jackson</span> <img class="p" src="/images/delete.gif"/></li>
+		<li class="acfb-data"><span>Wadsworth</span> <img class="p" src="/images/delete.gif"/></li>
+		<li class="acfb-data"><span>Alexandria</span> <img class="p" src="/images/delete.gif"/></li>
+		<input type="text" class="city acfb-input"/>
+	</ul>
+</form>
+<script>
+	$(document).ready(function() {
+		$("ul.first").autoCompletefb({urlLookup:'autocomplete',acOptions:{extraParams:{id:'user_login'}}});
+	});
+</script>

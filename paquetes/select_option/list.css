@@ -1,0 +1,24 @@
+.select_link {
+background-color: #FFFFFF;
+padding: 2px 6px 2px 6px;
+}
+.select_link_over {
+background-color: #3399FF;
+padding: 1px 5px 1px 5px;
+color: #FFFFFF;
+border: 1px solid #999999;
+border-style: dotted;
+}
+.search_select {
+position: absolute;
+display: inline;
+vertical-align: middle;
+background-color: #FFFFFF;
+text-align: left;
+border: 1px solid #999;
+color: #006699;
+}
+.a_select{
+cursor: pointer;
+vertical-align:top;
+}			

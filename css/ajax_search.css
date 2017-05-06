@@ -1,0 +1,17 @@
+
+			.suggest_link {
+				background-color: #D8D8D8;
+				padding: 2px 6px 2px 6px;
+			}
+			.suggest_link_over {
+	background-color: #CC0000;
+	padding: 2px 6px 2px 6px;
+	color: #FFFFFF;
+			}
+			#search_suggest_cliente {
+	position: absolute;
+	background-color: #FFFFFF;
+	text-align: left;
+	border: 0px solid #000000;
+	color: #000033;
+			}		

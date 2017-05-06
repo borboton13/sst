@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://loopj.com/tokeninput/demo.html -->
+<HTML><HEAD>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT type=text/javascript src="demo_files/jquery.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="demo_files/jquery.tokeninput.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css href="demo_files/token-input.css"><LINK 
+rel=stylesheet type=text/css href="demo_files/token-input-facebook.css">
+<SCRIPT type=text/javascript>
+    $(document).ready(function() {
+        $("#tokenize").tokenInput("demo_files/list.php", {
+            hintText: "Type in the names of your favorite TV shows",
+            noResultsText: "No results",
+            searchingText: "Searching..."
+        });
+
+        $("#tokenize2").tokenInput("demo_files/list.php", {
+            classes: {
+                tokenList: "token-input-list-facebook",
+                token: "token-input-token-facebook",
+                tokenDelete: "token-input-delete-token-facebook",
+                selectedToken: "token-input-selected-token-facebook",
+                highlightedToken: "token-input-highlighted-token-facebook",
+                dropdown: "token-input-dropdown-facebook",
+                dropdownItem: "token-input-dropdown-item-facebook",
+                dropdownItem2: "token-input-dropdown-item2-facebook",
+                selectedDropdownItem: "token-input-selected-dropdown-item-facebook",
+                inputToken: "token-input-input-token-facebook"
+            }
+        });
+    });
+    </SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.6001.18882"></HEAD>
+<BODY>
+<form name="form1" method="post" action="demo_r.php">
+<H1>Jquery Tokenizing Autocomplete Input</H1>
+<DIV>
+<H2>List style</H2><INPUT id=tokenize name=blah> </DIV>
+<DIV>
+<H2>Facebook style</H2><INPUT id=tokenize2 name=blah2> 
+<input type="submit" name="Submit" value="Enviar">
+</DIV>
+</form>
+</BODY></HTML>

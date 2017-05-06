@@ -1,0 +1,398 @@
+/* estilo para el pie*/
+.pie{
+background-color:#29417A; height:25px;
+color:#B7C4D2;
+}
+.pie_txt{
+color:#FFFFFF;
+}
+A.enlace_blanco {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.enlace_blanco:hover {
+	COLOR: #BBEB8B; BACKGROUND-COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+/* estilo para fuentes*/
+.title {
+	FONT-WEIGHT: 700; FONT-SIZE: 18px; LINE-HEIGHT: 22px; COLOR: #006699;
+}
+
+.title2 {
+	FONT-WEIGHT: 700; FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 14px
+}
+.title3 {
+	FONT-WEIGHT: 700; FONT-SIZE: 10px; COLOR: #FFFFFF; LINE-HEIGHT: 14px
+}
+.title4 {
+	FONT-WEIGHT: 700; FONT-SIZE: 11px; COLOR: #cc0000; LINE-HEIGHT: 14px
+}
+.title5 {
+	 FONT-SIZE: 10px; 
+}
+.title6 {
+	FONT-WEIGHT: 700; COLOR: #006699; FONT-SIZE: 10px; LINE-HEIGHT: 14px
+}
+.title7 {
+	 COLOR: #ff6600;
+}
+.naranja {
+	 COLOR: #ff6600;
+}
+.verde {
+	 COLOR: #009900;
+}
+.cafe {
+	 COLOR: #996600;
+}
+.rojo {
+	 COLOR: #E11C1E;
+}
+.azul {
+	COLOR: #006699; FONT-SIZE: 10px; LINE-HEIGHT: 14px; font-weight:bold;
+}
+
+.small {
+	 FONT-SIZE: 10px; 
+}
+.medium {
+	 FONT-SIZE: 14px; 
+}
+.large {
+	 FONT-SIZE: 18px; 
+}
+.marcar {
+	COLOR: #000000; font-weight: bold; BACKGROUND-COLOR: #FFCC00;
+}
+/* estilos para campos */
+.Text1 {
+	BORDER-RIGHT: #CCCCCC 0px solid; BORDER-TOP: #B1C3D9 0px solid; FONT: 12px Courier New, Courier, mono; BORDER-LEFT: #CCCCCC 0px solid; COLOR: #000066; BORDER-BOTTOM: #B1C3D9 0px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: left
+	
+}
+.Text2 {
+	BORDER-RIGHT: #CCCCCC 0px solid; BORDER-TOP: #B1C3D9 0px solid; FONT: 12px Courier New, Courier, mono; BORDER-LEFT: #CCCCCC 0px solid; COLOR: #000066; BORDER-BOTTOM: #B1C3D9 0px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: right
+	
+}
+.Text3 {
+	BORDER-RIGHT: #CCCCCC 0px solid; BORDER-TOP: #B1C3D9 0px solid; FONT: 12px Courier New, Courier, mono; BORDER-LEFT: #CCCCCC 0px solid; COLOR: #000066; BORDER-BOTTOM: #B1C3D9 0px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center
+	
+}
+.Text4 {
+	BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #CCCCCC 1px solid; FONT: 11px Verdana, sans-serif; font-weight: bold; BORDER-LEFT: #CCCCCC 1px solid; COLOR: #000066; BORDER-BOTTOM: #CCCCCC 1px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center 	
+}
+.Text5 {
+	BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #CCCCCC 1px solid; FONT: 11px Verdana, sans-serif; font-weight: bold; BORDER-LEFT: #CCCCCC 1px solid; COLOR: #000066; BORDER-BOTTOM: #CCCCCC 1px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: left	
+}
+.Text6 {
+	BORDER-RIGHT: #CCCCCC 1px solid; BORDER-TOP: #CCCCCC 1px solid; FONT: 11px Verdana, sans-serif; font-weight: bold; BORDER-LEFT: #CCCCCC 1px solid; COLOR: #000066; BORDER-BOTTOM: #CCCCCC 1px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: right 	
+}
+.select {
+	BORDER-RIGHT: #000066 1px solid; BORDER-TOP: #000066 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #000066 1px solid; WIDTH: 200px; COLOR: #003366; LINE-HEIGHT: 12px; BORDER-BOTTOM: #000066 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}
+.select2 {
+	BORDER-RIGHT: #000066 1px solid; BORDER-TOP: #000066 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #000066 1px solid; WIDTH: 470px; COLOR: #003366; LINE-HEIGHT: 12px; BORDER-BOTTOM: #000066 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}
+.selectl {
+	BORDER-RIGHT: #000066 1px solid; BORDER-TOP: #000066 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #000066 1px solid; WIDTH: 232px; COLOR: #003366; LINE-HEIGHT: 12px; BORDER-BOTTOM: #000066 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}
+.buscar {
+	FONT: 11px Verdana, sans-serif;
+	font-weight: normal;
+	COLOR: #006699;
+	BACKGROUND-REPEAT: repeat-x;
+	TEXT-ALIGN: left;
+}
+.Mayusculas {
+	FONT: 11px Verdana, sans-serif;
+	font-weight: normal;
+	COLOR: #006699;
+	BACKGROUND-REPEAT: repeat-x;
+	TEXT-ALIGN: left;
+	text-transform: uppercase;
+}
+.Text_left {
+	FONT: 11px Verdana, sans-serif; font-weight: normal; COLOR: #006699; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: left; 
+}
+.Text_right {
+	FONT: 11px Verdana, sans-serif; font-weight: normal; COLOR: #006699; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: right}
+.Text_center {
+	FONT: 11px Verdana, sans-serif; font-weight: normal; COLOR: #006699; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center}
+.Text_area {
+COLOR: #006699;
+FONT: 11px Verdana, sans-serif;
+overflow: auto;
+}	
+.selectbuscar {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; WIDTH: auto; COLOR: #006699; LINE-HEIGHT: 12px; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}
+.Text_numero {
+	FONT: 24px Verdana, sans-serif; font-weight: normal; COLOR: #006699; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center	
+}
+/* general */
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; background-color:#FFFFFF; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #666666; PADDING-TOP: 0px; FONT-FAMILY: Verdana, sans-serif
+}
+TABLE {
+	FONT: 11px Verdana, sans-serif
+}
+/* TABLA 1 */
+.marco{
+background-color: #F2F2F2;
+color: #666666;
+font-size: 12px;
+BORDER-RIGHT: #B9DB6F 1px solid;  
+BORDER-TOP: #B9DB6F 1px solid;    
+BORDER-LEFT: #B9DB6F 1px solid;  
+BORDER-BOTTOM: #B9DB6F 1px solid; 
+}
+.table1{
+background-color: #ffffff;
+color: #666666;
+font-size: 12px;
+BORDER-RIGHT: #ccd1d6 1px solid;  
+BORDER-TOP: #ccd1d6 1px solid;    
+BORDER-LEFT: #ccd1d6 1px solid;  
+BORDER-BOTTOM: #ccd1d6 1px solid; 
+}
+
+.table1 th{
+	background-color: #485765;
+	text-align: center;
+	height:16px;
+	color: #FFFFFF;
+}
+.table1 td{ vertical-align:top;}
+.table3 {
+BORDER-RIGHT: #ccd1d6 1px solid;  
+BORDER-TOP: #ccd1d6 1px solid;    
+BORDER-LEFT: #ccd1d6 1px solid;  
+BORDER-BOTTOM: #ccd1d6 1px solid; 
+}
+.table3 td.negro{
+color: #000000;
+}
+.table3 td.marco{
+background-color: #EAEAEA;
+color: #666666;
+font-size: 12px;
+BORDER-RIGHT: #B9DB6F 1px solid;  
+BORDER-TOP: #B9DB6F 1px solid;    
+BORDER-LEFT: #B9DB6F 1px solid;  
+BORDER-BOTTOM: #B9DB6F 1px solid; 
+}
+.table3 td.paginado{
+	BACKGROUND-COLOR: #CEE79C;
+	text-align: right;
+}
+.table3 caption {
+	font-weight: bold;
+	border-bottom:2px solid #87B32D;
+	color: #006699;
+	padding-bottom: 1px;
+	font-size: 18px;
+}
+.table3 th{
+	background-color: #29417A;
+	text-align: center;
+	height:16px;
+	color: #FFFFFF;
+}
+.table3 tfoot th, .table3 tfoot td {
+    font-style:italic;
+    border-bottom:3px solid #87B32D;
+} 
+
+
+/* TABLA 2 */
+.table2{
+	border: #CCD1D6 1px solid;
+	padding: 0; 
+}
+.table2 caption {
+	font-weight: bold;
+	background: #006699 url(../img/corner.gif) no-repeat right top;
+	border-bottom:3px solid #2883E6;
+	color: #FFFFFF;
+	padding-bottom: 1px;
+}
+.table2 th{
+	background-color: #DEDEDE;
+	text-align: left;
+	padding-left: 4px;
+	height:20px;
+}
+.table2 td{
+	background-color: #F1F1F1;
+	height:20px;
+}
+.table2 td.resaltar{
+	font-style: italic;
+	font-weight:bold;
+	color: #006699;
+}
+.table2 td.marco{
+	background-color: #FFEEBB;
+	color: #666666;
+	font-size: 12px;
+	BORDER-RIGHT: #FF9900 1px solid;
+	BORDER-TOP: #FF9900 1px solid;
+	BORDER-LEFT: #FF9900 1px solid;
+	BORDER-BOTTOM: #FF9900 1px solid;
+	cursor: hand;
+}
+.table2 tfoot th, .table2 tfoot td {
+	background-color:#E7E7E7;
+    font-style:italic;
+    border-bottom:3px solid #006699;
+}
+
+FORM {
+	MARGIN: 0px
+}
+.BotonForm {
+	BORDER-RIGHT: #000066 1px solid; BORDER-TOP: #000066 1px solid; BACKGROUND-IMAGE: url(../img/bg_boton.gif); FONT: bold 10px/10px Verdana, sans-serif; BORDER-LEFT: #000066 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #000066 1px solid; HEIGHT: 17px; TEXT-ALIGN: center
+}
+.Boton {
+	BORDER-RIGHT: #000066 1px solid;
+	BORDER-TOP: #000066 1px solid;
+	BACKGROUND-IMAGE: url(../img/bg_boton.gif);
+	FONT: bold 10px/10px Verdana, sans-serif;
+	BORDER-LEFT: #000066 1px solid;
+	CURSOR: hand;
+	COLOR: #000066;
+	BORDER-BOTTOM: #000066 1px solid;
+	HEIGHT: 18px;
+	TEXT-ALIGN: center;
+	TEXT-DECORATION: none;
+	vertical-align: text-bottom;
+}
+.Boton:hover {
+	BORDER-RIGHT: #000066 1px solid;
+	BORDER-TOP: #000066 1px solid;
+	BACKGROUND-IMAGE: url(../img/bg_boton.gif);
+	FONT: bold 10px/10px Verdana, sans-serif;
+	BORDER-LEFT: #000066 1px solid;
+	CURSOR: hand;
+	COLOR: #FF6600;
+	BORDER-BOTTOM: #000066 1px solid;
+	HEIGHT: 18px;
+	TEXT-ALIGN: center;
+	TEXT-DECORATION: none;
+	vertical-align: text-bottom;
+}
+/* enelaces */
+A.enlacemenu {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.enlacemenu:hover {
+	COLOR: #ffffff; BACKGROUND-COLOR: #ff6600; TEXT-DECORATION: none
+}
+A.enlace_s_menu {
+	COLOR: #006699; TEXT-DECORATION: none
+}
+A.enlace_s_menu:hover {
+	COLOR: #ffffff; BACKGROUND-COLOR: #ff6600; TEXT-DECORATION: none
+}
+A.enlace_oculto {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.enlace_oculto:hover {
+	COLOR: #000000; TEXT-DECORATION: underline}
+a.listing:link, a.listing:visited {
+color: #b33940;
+font-size: 11px;
+text-decoration: none;
+text-transform: uppercase;
+	}
+a.listing:hover {
+color: #fff;
+font-size: 11px;
+text-decoration: none;
+text-transform: uppercase;
+ background-color: #b33940;
+}
+
+a.listingRev:link, a.listingRev:visited {
+color: #b33940;
+font-size: 11px;
+text-decoration: none;
+/*text-transform: uppercase;*/
+	}
+a.listingRev:hover {
+color: #fff;
+font-size: 11px;
+text-decoration: none;
+/*text-transform: uppercase;*/
+ background-color: #b33940;
+}
+
+.adjunto {
+	FONT: 11px Verdana, sans-serif; font-weight: normal; COLOR: #006699; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: left; 
+}
+.marcar_check{
+color: #FF6600;
+font: bold;
+text-decoration: none;
+	}
+
+A.enlaceboton {
+	COLOR: #006699; CURSOR: hand; TEXT-DECORATION: none 
+}
+A.enlaceboton:hover {
+	COLOR: #006699; BACKGROUND-COLOR: #FFFFCC; TEXT-DECORATION: none
+}
+A.enlacebotonverde {
+	COLOR: #009900;; CURSOR: hand; TEXT-DECORATION: none 
+}
+A.enlacebotonverde:hover {
+	COLOR: #009900;; BACKGROUND-COLOR: #FFFFCC; TEXT-DECORATION: none
+}
+A.enlacemail {
+	COLOR: #009900;
+	CURSOR: hand;
+}
+A.enlacemail:hover {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+/* estilo para listados */
+.row1 {
+background-color: #f6f7f8;
+color: #666666;
+font-size: 12px;
+BORDER-bottom: #ccd1d6 1px solid;
+font-weight: 400;
+height: 30px;
+padding-left: 15px; 
+}
+.row2{
+color: #666666;
+font-size: 12px;
+BORDER-bottom: #ccd1d6 1px solid;
+font-weight: 400;
+height: 30px;
+padding-left: 15px; 
+}
+.odd {
+	BACKGROUND: #f6f7f8
+}
+.even {
+	BACKGROUND: #f1f1f1
+}
+
+TABLE TR.marked {
+	BACKGROUND: #ffcc99; COLOR: #000000
+}
+.hover {
+	BACKGROUND: #DADADA; COLOR: #000000
+}
+
+/** **/
+.font9 {
+	font-size: 9px;
+}
+.font10 {
+	font-size: 10px;
+}
+
+.selectb {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; WIDTH: 70px; COLOR: #006699; LINE-HEIGHT: 12px; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}

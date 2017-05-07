@@ -19,34 +19,32 @@
     </tr>
     <tr>
         <th>Formulario:</th>
-        <td><select name="formulario" class="selectbuscar" id="formulario">
+        <td><select name="codigoForm" class="selectbuscar" id="codigoForm">
                 <option value="0" selected class="title7"> Seleccionar... </option>
                 <?php
                 $resultado = mysql_query("SELECT idformulario, codigo, nombre, area FROM formulario");
                 while($dato=mysql_fetch_array($resultado))
-                    echo '<option value="'.$dato['idformulario'].'-'.$dato['codigo'].'-'.$dato['nombre'].'">'.$dato['codigo'].' - '.$dato['nombre'].'</option>';
+                    echo '<option value="'.$dato['codigo'].'">'.$dato['codigo'].' - '.$dato['nombre'].'</option>';
                 ?>
             </select>
         </td>
     </tr>
-    <!--<tr>
-	  <th ><span class="rojo">*</span>Fecha Inicial:</th>
-	  <td><input name="fechainicio" type="text" class="Text_center" id="fechainicio" size="12" readonly="yes">
-              <img onclick=calendar.toggle() src="../../img/cal.gif" alt="Seleccionar fecha incial" width="16" height="16">
-          </td>
-	</tr>-->
+
     <tr>
-	  <th ><span class="rojo">*</span>Fecha Inicial:</th>
-	  <td>
-          <input name="fechainicio" type="text" onclick="displayCalendar(this,'yyyy-mm-dd',this)" id="fecha" readonly="yes">
-          <img onclick=calendar.toggle() src="../../img/cal.gif" alt="Seleccionar fecha incial" width="16" height="16">
-      </td>
+        <th><span class="rojo">*</span>Fecha Inicial:</th>
+        <td>
+            <input name="fechainicio" type="text" id="fechainicio" size="10" class="Text_left" value="" onclick="displayCalendar(this,'yyyy-mm-dd',this,false)" readonly="yes"/>
+            <img onclick="displayCalendar(document.amper.fechainicio,'yyyy-mm-dd',this,false)" src="../../img/cal.gif" alt="Seleccionar fecha" width="16" height="16">
+            yyyy-mm-dd
+        </td>
 	</tr>
 	<tr>
-	  <th width="25%" ><span class="rojo">*</span>Fecha Final: </th>
-	  <td><input name="fechafin" type="text" class="Text_center" id="fechafin" size="12" readonly="yes">
-              <img onclick=calendarb.toggle() src="../../img/cal.gif" alt="Seleccionar fecha final" width="16" height="16">
-          </td>
+	    <th><span class="rojo">*</span>Fecha Final:</th>
+	    <td>
+            <input name="fechafin" type="text" id="fechafin" size="10" class="Text_left" value="" onclick="displayCalendar(this,'yyyy-mm-dd',this,false)" readonly="yes"/>
+            <img onclick="displayCalendar(document.amper.fechafin,'yyyy-mm-dd',this,false)" src="../../img/cal.gif" alt="Seleccionar fecha" width="16" height="16">
+            yyyy-mm-dd
+        </td>
 	</tr>
         
 	</tbody>
@@ -71,14 +69,6 @@ bkLib.onDomLoaded(function() {
 	new nicEditor({buttonList : ['removeformat','bold','italic','underline','html']}).panelInstance('obs');
 });
 </SCRIPT>
-<SCRIPT type=text/javascript>
-var calendar;
-var calendarb;
-window.onload = function() {
-	calendar = new Epoch('dp_cal','popup',document.getElementById('fechainicio'));
-	calendarb = new Epoch('dp_cal','popup',document.getElementById('fechafin'));
-}
-</script>  
 
   <SCRIPT src="../../js/validador.js" type=text/javascript></SCRIPT>
   <script type="text/javascript">

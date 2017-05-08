@@ -8,9 +8,6 @@ $fechainicio = $_POST["fechainicio"];
 $fechafin    = $_POST["fechafin"];
 
 switch ($codigoForm){
-    case 'P009':
-        include 'report/report_P009.php';
-        break;
     case 'P001':
         include 'report/report_P001.php';
         break;
@@ -28,6 +25,21 @@ switch ($codigoForm){
         break;
     case 'P006':
         include 'report/report_P006.php';
+        break;
+    case 'P007':
+        include 'report/report_P007.php';
+        break;
+    case 'P008':
+        include 'report/report_P008.php';
+        break;
+    case 'P009':
+        include 'report/report_P009.php';
+        break;
+    case 'P010':
+        include 'report/report_P010.php';
+        break;
+    case 'P011':
+        include 'report/report_P011.php';
         break;
 }
 

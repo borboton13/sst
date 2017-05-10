@@ -50,6 +50,9 @@ switch ($codigoForm){
     case 'P014':
         include 'report/report_P014.php';
         break;
+    case 'P015':
+        include 'report/report_P015.php';
+        break;
 }
 
 ?>

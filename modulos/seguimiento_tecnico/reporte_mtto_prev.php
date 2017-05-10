@@ -22,7 +22,7 @@
         <td><select name="codigoForm" class="selectbuscar" id="codigoForm">
                 <option value="0" selected class="title7"> Seleccionar... </option>
                 <?php
-                $resultado = mysql_query("SELECT idformulario, codigo, nombre, area FROM formulario where idformulario <= 14");
+                $resultado = mysql_query("SELECT idformulario, codigo, nombre, area FROM formulario where idformulario <= 15");
                 while($dato=mysql_fetch_array($resultado))
                     echo '<option value="'.$dato['codigo'].'">'.$dato['codigo'].' - '.$dato['nombre'].'</option>';
                 ?>

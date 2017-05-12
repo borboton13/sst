@@ -4,7 +4,10 @@
 	min-width:1000px;
 }
 nav {
-	background-color:rgb(255,100,100);
+
+    background-color:rgb(192, 57, 43);
+    background-color:rgb(255,100,100);
+    background-color:rgb(31, 97, 141);
 	padding:10px 0;
 }
 nav ul {
@@ -20,6 +23,7 @@ nav ul li {
 /* sub navigation */
 nav li ul {    
     background-color:rgb(225,75,75);
+    background-color:rgb(192, 57, 43);
     position:absolute;
     left:0;
     top:40px; /* make this equal to the line-height of the links (specified below) */
@@ -51,12 +55,13 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a:active {
-    color:rgb(50,50,50);
+    color:rgb(0,0,0);
 }
 
 /* style sub level links */
 nav li li a {
     border-bottom:solid 1px rgb(200,50,50);
+    border-bottom:solid 1px rgb(255,100,100);
     margin:0 10px;
     padding:0;
 }

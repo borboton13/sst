@@ -1,6 +1,6 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr><td colspan="2" background="../../img/menu_fill_up.jpg" height="30"></td></tr>
-    <TR>
+    <tr><td colspan="2" background="../../img/menu_fill_up.jpg" height="30"></td></tr>
+    <tr>
           <TD width="50%" class="pie">&nbsp;<? echo"$cargo"; ?>: <strong class="pie_txt"><? echo"$nombrec"; ?></strong> Ingresos: <strong class="pie_txt"><? echo"$nro_ing"; ?></strong> </TD>
           <TD width="50%" class="pie">
 		    <div align="right">
@@ -36,12 +36,14 @@
 	  }
 		  ?>
 		  <a href="../../salir.php" class="enlace_blanco">[Cerrar Sesion]</a></div></TD>
-  </TR>
-<tr><td class="pie" colspan="2"><br /><div align="center"><span class="pie_txt"><b>SANTA CRUZ</b> OFICINA CENTRAL: Direcci&oacute;n Barrio Dr. Melchor Pinto Parada UV 71A, Manzano 3 # 1035<br />
-<b>LA PAZ</b> El Alto, Zona Villa Dolores Calle Cap. Issac Arias esq Av. Arica # 2555 
- </span><br />
- &copy; <?=date("Y")?> Todos los derechos reservados www.dimesat.com.bo 
-
-</div><br /></td></tr>
+  </tr>
+    <tr><td class="pie" colspan="2"><br />
+        <div align="center">
+            <span class="pie_txt"><b>SANTA CRUZ</b> OFICINA CENTRAL: Direcci&oacute;n Barrio Dr. Melchor Pinto Parada UV 71A, Manzano 3 # 1035<br />
+            <b>LA PAZ</b> El Alto, Zona Villa Dolores Calle Cap. Issac Arias esq Av. Arica # 2555
+            </span><br />
+            <span class="pie_txt">Sistema de Seguimiento Técnico</span><br />&copy; <?=date("Y")?> Todos los derechos reservados
+        </div><br />
+        </td>
+    </tr>
 </table>
-

@@ -6,14 +6,14 @@ $pagina = $_GET['pagina'];
 }
 ?>
 <table width="100%" class="table3">
-<caption class="title">LISTA DE PROYECTOS</caption>
+<caption class="title_">MANTENIMIENTO CORRECTIVO</caption>
 <tr> 
 <td colspan="8" class="paginado">
 <?php
 $rs = new paginado($conexion);
 $rs->pagina($pagina);
 $rs->propagar("path");
-$rs->porPagina(10);
+$rs->porPagina(12);
 if(!$rs->query("SELECT s.id_st_proyecto,c.razon_social,s.declaracion_proyecto,date_format(s.fecha_inicio,'%d/%m/%Y'),date_format(s.fecha_final,'%d/%m/%Y'),concat(u.nombre, ' ', u.ap_pat),s.fecha_registro FROM (st_proyecto s INNER JOIN clientes c ON s.id_cliente=c.id) INNER JOIN usuarios u ON s.id_usuario=u.id ORDER BY s.id_st_proyecto DESC"))
 {    die( $rs->error() );
 }

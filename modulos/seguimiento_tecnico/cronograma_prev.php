@@ -94,7 +94,7 @@ $filas	   = mysql_num_rows($resultado);
         <!--<td class="marco"><a class="enlacebotonverde" href="<?/* echo $link_modulo . '?path=prev_cert_cba.php' */?>">&nbsp;CERTIFICADOS Y ACTAS&nbsp;</a></td>-->
         <!--<input name="report" type="button" value="Reporte Mtto" onClick="location.href='<?/*=$link_modulo*/?>?path=reporte_mtto_prev.php'" />-->
         <? if($admin || $client){?>
-        <td class="" align="center"><a class="enlacebotonverde" href="<? echo $link_modulo . '?path=reporte_mtto_prev.php' ?>">&nbsp;Reportes de Mantenimiento&nbsp;</a></td>
+        <td class="" align="center"><a class="enlacebotonverde" href="<? echo $link_modulo . '?path=reporte_mtto_prev.php' ?>">&nbsp;Reportes x Formulario&nbsp;</a></td>
         <?php } ?>
     </tr>
 </table>

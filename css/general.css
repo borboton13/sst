@@ -184,7 +184,7 @@ BORDER-BOTTOM: #B9DB6F 1px solid;
 	text-align: right;
 }
 .table3 caption {
-	font-weight: bold;
+	/*font-weight: bold;*/
 	border-bottom:2px solid #87B32D;
 	color: #006699;
 	padding-bottom: 1px;

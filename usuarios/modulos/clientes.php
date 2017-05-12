@@ -13,13 +13,19 @@ require("../funciones/verificar_sesion.php");
 <BODY>
 <?
 require("../../funciones/encabezado.php");
-require("../funciones/menu.php");
+//require("../funciones/menu.php");
+require("../funciones/menu2.php");
 $modulo="clientes";
 $link_modulo=$modulo.".php";
 $link_modulo_r=$modulo."_r.php";
+?>
+<div id="wrapper"><div id="main"><div class="content">
+<?php
 if (isset($_REQUEST['path'])){
 $path=$_REQUEST['path'];
 include("../../modulos/clientes/".$path);
 }
-require("../../funciones/pie.php"); ?>
+?>
+</div></div></div>
+<?php require("../../funciones/footer.php"); ?>
 </BODY></HTML>

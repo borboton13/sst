@@ -20,7 +20,7 @@ $fecha=$dato[0];
 $fecha=substr($fecha,0,10);
 
 ?>
-<table width="98%" align="center" class="table3">
+<table width="98%" align="center" class="table4">
 <caption>TICKETS DEL DIA PARA SEGUIMIENTO TECNICO</caption>
 <tr><TD colspan="8">
 <table>
@@ -28,7 +28,7 @@ $fecha=substr($fecha,0,10);
 <tr>
 	<td class="marco">
 	  <form name="form1" method="post" action="#">
-	  <span class="title7">Seleccione el dia a ver:</span> 
+	  <span class="title7">&nbsp;Seleccionar dia:&nbsp;</span>
 	  <input name="menos" type="submit" value="&lt;" title="dia anterior"> 
           <input name="mas" type="submit"value="&gt;" title="dia siguiente"> 
           <input name="fecha" type="text" onclick="displayCalendar(this,'yyyy-mm-dd',this)" id="fecha" value="<?=substr($fecha,0,10);?>">
@@ -67,7 +67,7 @@ $fecha=substr($fecha,0,10);
 	  case 11: echo"NOV";break;
 	  case 12: echo"DIC";break;		  	  
 	  }
-	  echo" ".substr($fecha,0,4);
+	  echo" ".substr($fecha,0,4)."&nbsp;";
 ?>
 		</form>
 		</td>

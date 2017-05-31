@@ -3,7 +3,8 @@
 <input type="hidden" name="path" value="excel_st_mtto_prev.php" />
 <div align="center" class="title">Reporte de Mantenimiento Preventivo</div>
 <table width="600" align="center" class="table2">
-<caption>Datos para el Reporte</caption>
+    <br />
+    <caption>Datos para el Reporte</caption>
   <tbody>
     <tr>
         <th width="31%" ><span class="title4">*</span>Centro de Mantenimiento:</th>

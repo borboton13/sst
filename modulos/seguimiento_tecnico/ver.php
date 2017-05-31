@@ -5,7 +5,7 @@ if (isset($_GET['pagina'])){
 $pagina = $_GET['pagina'];
 }
 ?>
-<table width="100%" class="table3">
+<table width="100%" class="table4">
 <caption class="title_">MANTENIMIENTO CORRECTIVO</caption>
 <tr> 
 <td colspan="8" class="paginado">

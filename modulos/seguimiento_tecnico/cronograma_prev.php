@@ -99,7 +99,7 @@ $filas	   = mysql_num_rows($resultado);
     </tr>
 </table>
 
-<table width="98%" align="center" class="table3">
+<table width="98%" align="center" class="table4">
 <!--<caption>CRONOGRAMA CENTRO DE MANTENIMIENTO</caption>-->
 <tr>
 <th width="6%">FECHA</th>

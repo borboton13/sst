@@ -18,11 +18,11 @@ $sw = $_GET["sw"];
         -webkit-box-sizing:border-box;
         font-family:arial;
     }
-    body{background:url("http://www.galaxiastudio.com/wp-content/uploads/2014/03/2252.jpg")#FF9000}
+    body{background:url("img/2252.jpg")#FF9000}
     h1{
         color:#AAA173;
         text-align:center;
-        font-faimly:icon;
+        /*font-faimly:icon;*/
     }
 
     .login-form{
@@ -129,7 +129,7 @@ $sw = $_GET["sw"];
         color:#8C918F;
     }
     .alert{
-        display:none;
+        /*display:none;*/
         font-size:12px;
         color:#f00;
         float:left;
@@ -152,26 +152,29 @@ $sw = $_GET["sw"];
     <form class="form" name="form" method="post" action="v0001.php">
         <div class="login-form">
             <div align="center"><img src='img/logodimesat79x90.png'></div>
-            <h1>Seguimiento Tecnico</h1>
+            <h1>Sistema <br />Seguimiento Tecnico</h1>
             <div class="form-group ">
-                <input name="santo" type="text" class="form-control" placeholder="Usuario" id="UserName">
+                <input name="santo" type="text" class="form-control" placeholder="Usuario" id="santo">
+                <!--<input name="santo" type="text" class="form-control" id="santo">-->
                 <i class="fa fa-user"></i>
             </div>
             <div class="form-group log-status">
-                <input name="sena" type="password" class="form-control" placeholder="Contrase&ntilde;a" id="Passwod">
+                <input name="sena" type="password" class="form-control" placeholder="Contrase&ntilde;a" id="santo">
+                <!--<input name="sena" type="password" class="form-control" id="santo">-->
                 <i class="fa fa-lock"></i>
             </div>
-            <span class="alert">Credenciales Invalidas</span>
-            <a class="link" href="#">Lost your password?</a>
-            <button type="button" class="log-btn" type=submit>Iniciar Sesi&oacute;n</button>
+            <? if($sw==1){ ?> <span class="alert">Credenciales Invalidas</span> <? } ?>
+            <? if($sw==2){ ?> <span class="alert">Error! Su sesi&oacute;nn ha caducado</span> <? } ?>
+            <!--<a class="link" href="#">Lost your password?</a>-->
+            <button class="log-btn" type="submit">Iniciar Sesi&oacute;n</button>
             <div align="center" class="texto"><br />&copy; 2017 DIMESAT S.R.L.</div>
         </div>
     </form>
 
-<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<!--<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
 
 </body></HTML>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $(document).ready(function(){
         $('.log-btn').click(function(){
             $('.log-status').addClass('wrong-entry');
@@ -183,4 +186,4 @@ $sw = $_GET["sw"];
         });
 
     });
-</script>
+</script>-->

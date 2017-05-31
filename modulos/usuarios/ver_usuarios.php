@@ -11,7 +11,7 @@ $consulta="SELECT id,CONCAT(nombre,' ',ap_pat,' ',ap_mat) AS nom,DATE_FORMAT(fec
  else  $admin=false;
 
 ?>
-<table width="100%" class="table3">
+<table width="100%" class="table4">
 <caption class="title">VER USUARIOS</caption>
 <tr> 
 <td colspan="10" class="paginado">
@@ -33,7 +33,7 @@ echo "Mostrando ".$rs->desde()." - ".$rs->hasta()." de un total de ".$rs->total(
 <th width="17%">CARGO</th>			              
 <th width="20%">CORREOS</th>
 <th width="17%">CUENTAS EXTERNAS </th> 
-<th width="8%">TELF PERSONAL </th>
+<th width="8%">TELF</th>
 <th width="5%">TELF OF</th>	
 <th width="3%">INT</th>	
 <th width="2%">ACT</th>

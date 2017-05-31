@@ -45,7 +45,7 @@ background-color:#F3F3F3;
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="676" style="background-color:#355BA9" align="center"><img src="img/login_banner.png" width="676" height="247"/></td><td style="background-color:#B6CFFF">
-          <form class="form" name="form" method="post" action="v0001.php">
+<form class="form" name="form" method="post" action="v0001.php">
 <table width="350" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="6%">&nbsp;</td>

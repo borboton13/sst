@@ -262,11 +262,11 @@ while($dato=mysql_fetch_array($resultado))
 </table></td>
   </tr>
 </table>
-<table width="98%" cellspacing="1" class="table3" align="center">
+<table width="98%" cellspacing="1" class="table4" align="center">
   <tr>
-    <td colspan="10" class="paginado"><div align="left">
-      <?=$txt?>
-    </div></td>
+    <td colspan="9" class="paginado">
+        <div align="left"><?=$txt?></div>
+    </td>
     <td colspan="3" class="paginado"><?
 $rs = new paginado($conexion);
 $rs->pagina($pagina);
@@ -305,7 +305,7 @@ $i=$rs->desde();
     <th width="8%">TICKET</th>
     <th width="12%">INFORME</th>
     <th width="5%">ESTADO</th>
-	<th width="7%">REVISION CLIENTE</th>
+	<th width="7%">REVISION</th>
   </tr>
   <tbody>
 <?
@@ -518,7 +518,7 @@ echo $rs->anterior()." - ".$rs->nroPaginas()." - ".$rs->siguiente();
 </table>
 <table width="98%" align="center" class="table3">
   <tr>
-    <td><strong class="rojo">Declaraci�n del proyecto:</strong><br>
+    <td><strong class="rojo">Declaraci&oacute;n del proyecto:</strong><br>
       <span class="small">
       <?=nl2br($declaracion_proyecto);?>
     </span></td>

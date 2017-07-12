@@ -20,8 +20,8 @@ $fecha=$dato[0];
 $fecha=substr($fecha,0,10);
 
 ?>
+<div align="center"><span class="title">TICKETS PARA SEGUIMIENTO TECNICO</span></div>
 <table width="98%" align="center" class="table4">
-<caption>TICKETS DEL DIA PARA SEGUIMIENTO TECNICO</caption>
 <tr><TD colspan="8">
 <table>
 <tr><td><a class="enlaceboton" href="../../excel/excel_st_listado_ticket.php" onclick="openNewWindowhtml( this, '800', '590' );return false;"><img src="../../img/excel_ico.gif" alt="Ver Listado en Excel" width="16" height="16" border="0" align="absmiddle" /> Ver Todo Listado en Excel </a></td></tr>	
@@ -29,12 +29,12 @@ $fecha=substr($fecha,0,10);
 	<td class="marco">
 	  <form name="form1" method="post" action="#">
 	  <span class="title7">&nbsp;Seleccionar dia:&nbsp;</span>
-	  <input name="menos" type="submit" value="&lt;" title="dia anterior"> 
-          <input name="mas" type="submit"value="&gt;" title="dia siguiente"> 
-          <input name="fecha" type="text" onclick="displayCalendar(this,'yyyy-mm-dd',this)" id="fecha" value="<?=substr($fecha,0,10);?>">
-	  <input name="Submit" type="submit" value="Ver">  
+	  <input class="btn_dark" name="menos" type="submit" value="&lt;" title="dia anterior">
+      <input class="btn_dark" name="mas" type="submit"value="&gt;" title="dia siguiente">
+      <input name="fecha" type="text" onclick="displayCalendar(this,'yyyy-mm-dd',this)" id="fecha" value="<?=substr($fecha,0,10);?>">
+	  <input class="btn_dark" name="Submit" type="submit" value="Ver">
 	  <? if($nively == 1){  ?>
-	  <input onClick="location.href='<?=$link_modulo?>?path=n_ticket.php'" type="button" value="Nuevo Ticket">
+	  <input class="btn_dark" onClick="location.href='<?=$link_modulo?>?path=n_ticket.php'" type="button" value="Nuevo Ticket">
 	  <? }  ?>
 &nbsp;
 <?php

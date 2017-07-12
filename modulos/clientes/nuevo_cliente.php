@@ -116,7 +116,8 @@ echo "<option>".$dato['sub_grupo']."</option>";
 <tfoot>
 <tr><td colspan="2"><span class="title4">(*) Campos requeridos</span><BR /><center>
 <input name="adicionar_cliente" type="submit" value="Adicionar" />
-<input name="Submit" type="reset" value="Cancelar" />
+<!--<input name="Submit" type="reset" value="Cancelar" />-->
+<input onClick="location.href='<?=$mclientes?>ver_clientes.php'" type="button" value="Cancelar">
 </center></td></tr></tfoot>
 </table>		
 </form>

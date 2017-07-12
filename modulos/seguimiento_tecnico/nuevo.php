@@ -37,8 +37,12 @@
 	  </tbody>
 	<tfoot>									
 	<tr>
-	  <td colspan="2"><center><input name="nuevo" type="submit" value="Siguiente" />		 
-	  </center></td>
+	  <td colspan="2">
+          <center>
+              <input name="nuevo" type="submit" value="Guardar" class="btn_dark" />
+              <input onClick="location.href='<?=$mst?>ver.php'" class="btn_dark" type="button" value="Cancelar">
+          </center>
+      </td>
 	</tr>
 	</tfoot>
 

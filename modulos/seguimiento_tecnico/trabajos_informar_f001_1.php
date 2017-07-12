@@ -201,17 +201,23 @@ Llenar Formulario Paso 1 de 3:
 <th><strong class="verde"><span class="rojo">*</span>SERVICIO AFECTADO </strong></th>
 </tr>
 <tr>
-<td width="50%"><div align="right" style="padding-right:80px">
-  <label>TRANSMISION <input name="p5" type="radio" value="TRANSMISION" <? if($dato['p5']=="TRANSMISION") { echo"checked";}?>/></label><br />
-  <label>ENERGIA <input name="p5" type="radio" value="ENERGIA" <? if($dato['p5']=="ENERGIA") { echo"checked";}?>/></label><br />
-  <label>RBS <input name="p5" type="radio" value="RBS" <? if($dato['p5']=="RBS") { echo"checked";}?>/></label><br />
-  <label>BTS <input name="p5" type="radio" value="BTS" <? if($dato['p5']=="BTS") { echo"checked";}?>/></label><br />
-  <label>INFRAESTRUCTURA<input name="p5" type="radio" value="INFRAESTRUCTURA" <? if($dato['p5']=="INFRAESTRUCTURA") { echo"checked";}?>/></label></div></td>
-<TD width="50%"><div align="right" style="padding-right:80px">
-<label>CORTE DE TRAFICO <input name="p6" type="radio" value="CORTE DE TRAFICO"  <? if($dato['p6']=="CORTE DE TRAFICO") { echo"checked";}?>/></label><br />
-  <label>CORTE INTERMITENTE <input name="p6" type="radio" value="CORTE INTERMITENTE" <? if($dato['p6']=="CORTE INTERMITENTE") { echo"checked";}?>/></label><br />
-  <label>PELIGRO DE CORTE <input name="p6" type="radio" value="PELIGRO DE CORTE" <? if($dato['p6']=="PELIGRO DE CORTE") { echo"checked";}?>/></label></div><div align="center">
- <label>OTROS <input name="p6" type="radio" value="OTROS" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"checked";}?>/><input name="p6_otros" type="text" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"value='".substr($dato['p6'],7)."'";}?>/></label></div></TD>
+<td width="50%">
+    <div align="right" style="padding-right:80px">
+    TRANSMISION <input name="p5" type="radio" value="TRANSMISION" <? if($dato['p5']=="TRANSMISION") { echo"checked";}?>/><br />
+    ENERGIA <input name="p5" type="radio" value="ENERGIA" <? if($dato['p5']=="ENERGIA") { echo"checked";}?>/><br />
+    RBS <input name="p5" type="radio" value="RBS" <? if($dato['p5']=="RBS") { echo"checked";}?>/><br />
+    BTS <input name="p5" type="radio" value="BTS" <? if($dato['p5']=="BTS") { echo"checked";}?>/><br />
+    INFRAESTRUCTURA<input name="p5" type="radio" value="INFRAESTRUCTURA" <? if($dato['p5']=="INFRAESTRUCTURA") { echo"checked";}?>/>
+    </div>
+</td>
+<TD width="50%">
+    <div align="right" style="padding-right:80px">
+    CORTE DE TRAFICO <input name="p6" type="radio" value="CORTE DE TRAFICO"  <? if($dato['p6']=="CORTE DE TRAFICO") { echo"checked";}?>/><br />
+    CORTE INTERMITENTE <input name="p6" type="radio" value="CORTE INTERMITENTE" <? if($dato['p6']=="CORTE INTERMITENTE") { echo"checked";}?>/><br />
+    PELIGRO DE CORTE <input name="p6" type="radio" value="PELIGRO DE CORTE" <? if($dato['p6']=="PELIGRO DE CORTE") { echo"checked";}?>/></div><div align="center">
+    OTROS <input name="p6" type="radio" value="OTROS" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"checked";}?>/>
+    <input name="p6_otros" type="text" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"value='".substr($dato['p6'],7)."'";}?>/>
+    </div></TD>
 </tr>
 <tr>
 <th colspan="2"><strong class="verde"><span class="rojo">*</span>DESCRIPCION DE LA FALLA</strong></th>

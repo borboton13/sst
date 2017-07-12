@@ -11,12 +11,15 @@ require("../funciones/verificar_sesion.php");
 <SCRIPT src="../../js/general.js" type=text/javascript></SCRIPT>
 <link href="../../css/general.css" rel="stylesheet" type="text/css">
 
+<link href="../../css/menu3.css" rel="stylesheet" type="text/css">
+<link href="../../css/base.css" rel="stylesheet" type="text/css">
+
 </HEAD>
 <body>
 <?php
-require("../../funciones/encabezado.php");
+//require("../../funciones/encabezado.php");
 //require("../funciones/menu.php");
-require("../funciones/menu2.php");
+require("../funciones/menu3.php");
 $modulo="seguimiento_tecnico";
 $link_modulo=$modulo.".php";
 $link_modulo_r=$modulo."_r.php";

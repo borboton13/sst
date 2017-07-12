@@ -3,7 +3,7 @@ include("../../funciones/class.paginado.php");
 if (isset($_GET['pagina'])){
 $pagina = $_GET['pagina'];
 }				  
-$nro_por_pagina=30;
+$nro_por_pagina=15;
 
 $consulta="SELECT id,CONCAT(nombre,' ',ap_pat,' ',ap_mat) AS nom,DATE_FORMAT(fecha_nacimiento,'%d/%m/%Y') AS nac,cuenta,direccion,mail,mail2,skype,msn,telf,cel,telf_oficina,interno,cargo,nro_ing,activo FROM usuarios";
 
@@ -11,21 +11,28 @@ $consulta="SELECT id,CONCAT(nombre,' ',ap_pat,' ',ap_mat) AS nom,DATE_FORMAT(fec
  else  $admin=false;
 
 ?>
+<div align="center"><span class="title">LISTA DE USUARIOS</span></div>
 <table width="100%" class="table4">
-<caption class="title">VER USUARIOS</caption>
-<tr> 
-<td colspan="10" class="paginado">
-<?
-$rs = new paginado($conexion);
-$rs->pagina($pagina);
-$rs->porPagina($nro_por_pagina);
-$rs->propagar("path");
-$rs->propagar("nro_por_pagina");
-if(!$rs->query($consulta))
-{    die( $rs->error() );
-}
-echo "Mostrando ".$rs->desde()." - ".$rs->hasta()." de un total de ".$rs->total()."<br>";
-?>	 </td>
+<tr>
+    <td colspan="6" class="paginado">
+        <div align="left">
+        <?
+        $rs = new paginado($conexion);
+        $rs->pagina($pagina);
+        $rs->porPagina($nro_por_pagina);
+        $rs->propagar("path");
+        $rs->propagar("nro_por_pagina");
+        if(!$rs->query($consulta))
+        {    die( $rs->error() );
+        }
+        echo "Mostrando ".$rs->desde()." - ".$rs->hasta()." de un total de ".$rs->total()."<br>"; ?>
+        </div>
+    </td>
+    <td colspan="4" class="paginado">
+        <div align="right">
+            <input class="btn_dark" onClick="location.href='<?=$musuarios?>nuevo_usuario.php'" type="button" value="Nuevo">
+        </div>
+    </td>
 </tr>					  
 <tr>
 <th width="3%" height="16">COD</th>

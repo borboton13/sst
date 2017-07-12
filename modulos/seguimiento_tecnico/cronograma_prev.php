@@ -84,9 +84,9 @@ $filas	   = mysql_num_rows($resultado);
                     <option value="2017" <? if($anio==2017) echo"class='naranja' selected"; ?>>2017</option>
                     <option value="2016" <? if($anio==2016) echo"class='naranja' selected"; ?>>2016</option>
                 </select>&nbsp;
-                <input name="ver" type="submit"  value=" Ver " /> &nbsp;
+                <input class="btn_dark" name="ver" type="submit"  value=" Ver " /> &nbsp;
                 <? if($admin || $tech){?>
-                    <input name="nuevoE" type="button" value="Nuevo Evento" onClick="location.href='<?=$link_modulo?>?path=nuevo_evento.php'" />
+                    <input class="btn_dark" name="nuevoE" type="button" value="Nuevo Evento" onClick="location.href='<?=$link_modulo?>?path=nuevo_evento.php'" />
                 <?php } ?>
             </form>
         </td>
@@ -94,7 +94,8 @@ $filas	   = mysql_num_rows($resultado);
         <!--<td class="marco"><a class="enlacebotonverde" href="<?/* echo $link_modulo . '?path=prev_cert_cba.php' */?>">&nbsp;CERTIFICADOS Y ACTAS&nbsp;</a></td>-->
         <!--<input name="report" type="button" value="Reporte Mtto" onClick="location.href='<?/*=$link_modulo*/?>?path=reporte_mtto_prev.php'" />-->
         <? if($admin || $client){?>
-        <td class="" align="center"><a class="enlacebotonverde" href="<? echo $link_modulo . '?path=reporte_mtto_prev.php' ?>">&nbsp;Reportes x Formulario&nbsp;</a></td>
+        <td class="" align="center"><a class="enlacebtn" href="<? echo $link_modulo . '?path=reporte_mtto_prev.php' ?>">&nbsp;Reportes x Formulario&nbsp;</a></td>
+        <!--<td class="" align="center"><a class="enlacebotonverde" href="<?/* echo $link_modulo . '?path=reporte_mtto_prev.php' */?>">&nbsp;Reportes x Formulario&nbsp;</a></td>-->
         <?php } ?>
     </tr>
 </table>

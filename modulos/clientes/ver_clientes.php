@@ -76,9 +76,18 @@ case "id_cliente": $label="<B>ID CLIENTE</B>"; break;
 }
 $txt.="| Ordenar por $label ";
 }
-?><table width="98%" cellspacing="1" class="table3" align="center">
-<caption>VER LISTA DE CLIENTES<BR>
-<table border="0" align="center">	
+?>
+<div align="center"><span class="title">LISTA DE CLIENTES</span></div>
+<table width="98%" cellspacing="1" class="table4" align="center">
+<caption>
+<table border="0" align="center">
+    <tr>
+        <td colspan="7" class="paginado">
+            <div>
+                <input class="btn_dark" onClick="location.href='<?=$mclientes?>nuevo_cliente.php'" type="button" value="Nuevo">
+            </div>
+        </td>
+    </tr>
 <tr>
 <td class="marco"><form name="amper1" method="GET" action="<?=$link_modulo?>">
 <input type="hidden" name="path" value="ver_clientes.php" />

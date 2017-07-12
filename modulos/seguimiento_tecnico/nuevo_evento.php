@@ -60,8 +60,11 @@
 	</tbody>
 	<tfoot>									
 	<tr>
-	  <td colspan="2"><center><input name="nuevo" type="submit" value="Guardar" />		 
-	  </center></td>
+	  <td colspan="2">
+          <center>
+              <input class="btn_dark" name="nuevo" type="submit" value="Guardar" />
+              <input onClick="location.href='<?=$mst?>cronograma_prev.php'" class="btn_dark" type="button" value="Cancelar">
+          </center></td>
 	</tr>
 	</tfoot>
 

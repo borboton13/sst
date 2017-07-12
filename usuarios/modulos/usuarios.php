@@ -9,12 +9,16 @@ require("../funciones/verificar_sesion.php");
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <SCRIPT src="../../js/general.js" type=text/javascript></SCRIPT>
 <link href="../../css/general.css" rel="stylesheet" type="text/css">
+
+<link href="../../css/menu3.css" rel="stylesheet" type="text/css">
+<link href="../../css/base.css" rel="stylesheet" type="text/css">
+
 </HEAD>
 <BODY>
 <?
-require("../../funciones/encabezado.php");
+//require("../../funciones/encabezado.php");
 //require("../funciones/menu.php");
-require("../funciones/menu2.php");
+require("../funciones/menu3.php");
 $modulo="usuarios";
 $link_modulo=$modulo.".php";
 $link_modulo_r=$modulo."_r.php";

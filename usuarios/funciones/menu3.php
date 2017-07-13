@@ -23,7 +23,7 @@ if($nively=='3') $client = true; else $client = false;
     <a href="<?=$mst?>cronograma_prev.php" class="btn">Mtto Preventivo</a>
     <a href="<?=$mst?>tickets.php" class="btn">Tickets</a>
 
-    <? if($admin){ ?>
+    <? if($admin || $client){ ?>
     <a href="<?=$mst?>actas.php" class="btn">Actas</a>
     <? } ?>
 

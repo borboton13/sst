@@ -135,13 +135,13 @@ Llenar Formulario Paso 1 de 3:
 <th colspan="2"><strong class="verde">ATENCION:</strong></th>
 </tr>
 <tr>
-<td width="49%"><div align="right"><span class="rojo">*</span>Notificaci&oacute;n:<input name="p1" type="text" id="p1" size="20" value="<?=$dato['p1']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.p1,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
-<td width="51%"><div align="right"><span class="rojo">*</span>Ingreso al Sitio:<input name="time1" type="text" id="time1" size="20" value="<?=$dato['hora_llegada']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.time1,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
+<td width="49%"><div align="right"><span class="rojo">*</span>Notificaci&oacute;n:<input name="p1" type="text" id="p1" size="18" value="<?=$dato['p1']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.p1,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
+<td width="51%"><div align="right"><span class="rojo">*</span>Ingreso al Sitio:<input name="time1" type="text" id="time1" size="17" value="<?=$dato['hora_llegada']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.time1,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
 </tr>
 <tr>
 <td><div align="right">Inicio de Viaje:
-    <input name="p2" type="text" id="p2" size="20" value="<?=$dato['p2']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.p2,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
-<td><div align="right"><span class="rojo">*</span>Conclusi&oacute;n del trabajo:<input name="time2" type="text" id="time2" size="20" value="<?=$dato['hora_salida']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.time2,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
+    <input name="p2" type="text" id="p2" size="18" value="<?=$dato['p2']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.p2,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
+<td><div align="right"><span class="rojo">*</span>Conclusi&oacute;n del trabajo:<input name="time2" type="text" id="time2" size="17" value="<?=$dato['hora_salida']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/><img onclick="displayCalendar(document.amper.time2,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha incial" width="16" height="16"></div></td>
 </tr>
 </table>
 <table width="100%" cellspacing="2" class="table2">
@@ -161,17 +161,17 @@ Llenar Formulario Paso 1 de 3:
 </tr>
 <tr>
   <td width="50%"><div align="right" style="padding-right:80px">
-<label>ENERGIA <input name="p6" type="radio" value="ENERGIA"  <? if($dato['p6']=="ENERGIA") { echo"checked";}?>/></label><br />
-<label>ALARMAS EXTERNAS <input name="p6" type="radio" value="ALARMAS EXTERNAS"  <? if($dato['p6']=="ALARMAS EXTERNAS") { echo"checked";}?>/></label><br />
-<label>BTS <input name="p6" type="radio" value="BTS" <? if($dato['p6']=="BTS") { echo"checked";}?>/></label><br />
-<label>RECTIFICADORES <input name="p6" type="radio" value="RECTIFICADORES" <? if($dato['p6']=="RECTIFICADORES") { echo"checked";}?>/></label><br />
-<label>GRUPO GENERADOR <input name="p6" type="radio" value="GRUPO GENERADOR" <? if($dato['p6']=="GRUPO GENERADOR") { echo"checked";}?>/></label><br />
-<label>INFRAESTRUCTURA <input name="p6" type="radio" value="INFRAESTRUCTURA" <? if($dato['p6']=="INFRAESTRUCTURA") { echo"checked";}?>/></label></div></td>
+    <b>ENERGIA <input name="p6" type="radio" value="ENERGIA"  <? if($dato['p6']=="ENERGIA") { echo"checked";}?>/></b><br />
+    <b>ALARMAS EXTERNAS <input name="p6" type="radio" value="ALARMAS EXTERNAS"  <? if($dato['p6']=="ALARMAS EXTERNAS") { echo"checked";}?>/></b><br />
+    <b>BTS <input name="p6" type="radio" value="BTS" <? if($dato['p6']=="BTS") { echo"checked";}?>/></b><br />
+    <b>RECTIFICADORES <input name="p6" type="radio" value="RECTIFICADORES" <? if($dato['p6']=="RECTIFICADORES") { echo"checked";}?>/></b><br />
+    <b>GRUPO GENERADOR <input name="p6" type="radio" value="GRUPO GENERADOR" <? if($dato['p6']=="GRUPO GENERADOR") { echo"checked";}?>/></b><br />
+    <b>INFRAESTRUCTURA <input name="p6" type="radio" value="INFRAESTRUCTURA" <? if($dato['p6']=="INFRAESTRUCTURA") { echo"checked";}?>/></b></div></td>
   <TD width="50%"><div align="right" style="padding-right:80px">
-<label>VSAT <input name="p6" type="radio" value="VSAT"  <? if($dato['p6']=="VSAT") { echo"checked";}?>/></label><br />
-<label>BATERIAS <input name="p6" type="radio" value="BATERIAS" <? if($dato['p6']=="BATERIAS") { echo"checked";}?>/></label><br />
-<label>MW <input name="p6" type="radio" value="MW" <? if($dato['p6']=="MW") { echo"checked";}?>/></label></div><div align="center">
-<label>OTROS <input name="p6" type="radio" value="OTROS" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"checked";}?>/><input name="p6_otros" type="text" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"value='".substr($dato['p6'],7)."'";}?>/></label></div></TD>
+    <b>VSAT <input name="p6" type="radio" value="VSAT"  <? if($dato['p6']=="VSAT") { echo"checked";}?>/></b><br />
+    <b>BATERIAS <input name="p6" type="radio" value="BATERIAS" <? if($dato['p6']=="BATERIAS") { echo"checked";}?>/></b><br />
+    <b>MW <input name="p6" type="radio" value="MW" <? if($dato['p6']=="MW") { echo"checked";}?>/></b></div><div align="center">
+    <b>OTROS <input name="p6" type="radio" value="OTROS" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"checked";}?>/><input name="p6_otros" type="text" <? if(substr($dato['p6'],0,5)=="OTROS") { echo"value='".substr($dato['p6'],7)."'";}?>/></b></div></TD>
 </tr>
 
 <tr>

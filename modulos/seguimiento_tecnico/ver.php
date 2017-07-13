@@ -5,9 +5,9 @@ if (isset($_GET['pagina'])){
 $pagina = $_GET['pagina'];
 }
 ?>
-<? if($admin){ ?>
+
 <div align="center"><span class="title">MANTENIMIENTO CORRECTIVO</span></div>
-<? } ?>
+
 <table width="100%" class="table4">
 <tr>
     <td colspan="3" class="paginado">
@@ -23,9 +23,11 @@ $pagina = $_GET['pagina'];
         </div>
     </td>
     <td colspan="5" class="paginado">
+        <? if($admin){ ?>
         <div align="right">
             <input class="btn_dark" onClick="location.href='<?=$mst?>nuevo.php'" type="button" value="Nuevo">
         </div>
+        <? } ?>
     </td>
 </tr>			        
 	<tr>

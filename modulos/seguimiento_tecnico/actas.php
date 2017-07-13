@@ -23,9 +23,11 @@ $pagina = $_GET['pagina'];
         </div>
     </td>
     <td colspan="5" class="paginado">
+        <? if($admin){ ?>
         <div align="right">
             <input class="btn_dark" onClick="location.href='<?=$mst?>nueva_acta.php'" type="button" value="Nuevo">
         </div>
+        <? } ?>
     </td>
 </tr>			        
 	<tr>

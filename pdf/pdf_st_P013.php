@@ -389,6 +389,11 @@ $arr_f7 = explode(';', $arrays[6]);
 $arr_f8 = explode(';', $arrays[7]);
 $arr_f9 = explode(';', $arrays[8]);
 $arr_f10 = explode(';', $arrays[9]);
+$arr_f11 = explode(';', $arrays[10]);
+$arr_f12 = explode(';', $arrays[11]);
+$arr_f13 = explode(';', $arrays[12]);
+$arr_f14 = explode(';', $arrays[13]);
+$arr_f15 = explode(';', $arrays[14]);
 
 $data = array(
 	array('c1'=>$arr_f1[0], 'c2'=>$arr_f1[1], 'c3'=>$arr_f1[2], 'c4'=>$arr_f1[3], 'c5'=>$arr_f1[4], 'c6'=>$arr_f1[5], 'c7'=>$arr_f1[6], 'c8'=>$arr_f1[7], 'c9'=>$arr_f1[8], 'c10'=>$arr_f1[9], 'c11'=>$arr_f1[10], 'c12'=>$arr_f1[11], 'c13'=>$arr_f1[12], 'c14'=>$arr_f1[13]),
@@ -401,6 +406,11 @@ $data = array(
 	array('c1'=>$arr_f8[0], 'c2'=>$arr_f8[1], 'c3'=>$arr_f8[2], 'c4'=>$arr_f8[3], 'c5'=>$arr_f8[4], 'c6'=>$arr_f8[5], 'c7'=>$arr_f8[6], 'c8'=>$arr_f8[7], 'c9'=>$arr_f8[8], 'c10'=>$arr_f8[9], 'c11'=>$arr_f8[10], 'c12'=>$arr_f8[11], 'c13'=>$arr_f8[12], 'c14'=>$arr_f8[13]),
 	array('c1'=>$arr_f9[0], 'c2'=>$arr_f9[1], 'c3'=>$arr_f9[2], 'c4'=>$arr_f9[3], 'c5'=>$arr_f9[4], 'c6'=>$arr_f9[5], 'c7'=>$arr_f9[6], 'c8'=>$arr_f9[7], 'c9'=>$arr_f9[8], 'c10'=>$arr_f9[9], 'c11'=>$arr_f9[10], 'c12'=>$arr_f9[11], 'c13'=>$arr_f9[12], 'c14'=>$arr_f9[13]),
 	array('c1'=>$arr_f10[0], 'c2'=>$arr_f10[1], 'c3'=>$arr_f10[2], 'c4'=>$arr_f10[3], 'c5'=>$arr_f10[4], 'c6'=>$arr_f10[5], 'c7'=>$arr_f10[6], 'c8'=>$arr_f10[7], 'c9'=>$arr_f10[8], 'c10'=>$arr_f10[9], 'c11'=>$arr_f10[10], 'c12'=>$arr_f10[11], 'c13'=>$arr_f10[12], 'c14'=>$arr_f10[13]),
+    array('c1'=>$arr_f11[0], 'c2'=>$arr_f11[1], 'c3'=>$arr_f11[2], 'c4'=>$arr_f11[3], 'c5'=>$arr_f11[4], 'c6'=>$arr_f11[5], 'c7'=>$arr_f11[6], 'c8'=>$arr_f11[7], 'c9'=>$arr_f11[8], 'c10'=>$arr_f11[9], 'c11'=>$arr_f11[10], 'c12'=>$arr_f11[11], 'c13'=>$arr_f11[12], 'c14'=>$arr_f11[13]),
+    array('c1'=>$arr_f12[0], 'c2'=>$arr_f12[1], 'c3'=>$arr_f12[2], 'c4'=>$arr_f12[3], 'c5'=>$arr_f12[4], 'c6'=>$arr_f12[5], 'c7'=>$arr_f12[6], 'c8'=>$arr_f12[7], 'c9'=>$arr_f12[8], 'c10'=>$arr_f12[9], 'c11'=>$arr_f12[10], 'c12'=>$arr_f12[11], 'c13'=>$arr_f12[12], 'c14'=>$arr_f12[13]),
+    array('c1'=>$arr_f13[0], 'c2'=>$arr_f13[1], 'c3'=>$arr_f13[2], 'c4'=>$arr_f13[3], 'c5'=>$arr_f13[4], 'c6'=>$arr_f13[5], 'c7'=>$arr_f13[6], 'c8'=>$arr_f13[7], 'c9'=>$arr_f13[8], 'c10'=>$arr_f13[9], 'c11'=>$arr_f13[10], 'c12'=>$arr_f13[11], 'c13'=>$arr_f13[12], 'c14'=>$arr_f13[13]),
+    array('c1'=>$arr_f14[0], 'c2'=>$arr_f14[1], 'c3'=>$arr_f14[2], 'c4'=>$arr_f14[3], 'c5'=>$arr_f14[4], 'c6'=>$arr_f14[5], 'c7'=>$arr_f14[6], 'c8'=>$arr_f14[7], 'c9'=>$arr_f14[8], 'c10'=>$arr_f14[9], 'c11'=>$arr_f14[10], 'c12'=>$arr_f14[11], 'c13'=>$arr_f14[12], 'c14'=>$arr_f14[13]),
+    array('c1'=>$arr_f15[0], 'c2'=>$arr_f15[1], 'c3'=>$arr_f15[2], 'c4'=>$arr_f15[3], 'c5'=>$arr_f15[4], 'c6'=>$arr_f15[5], 'c7'=>$arr_f15[6], 'c8'=>$arr_f15[7], 'c9'=>$arr_f15[8], 'c10'=>$arr_f15[9], 'c11'=>$arr_f15[10], 'c12'=>$arr_f15[11], 'c13'=>$arr_f15[12], 'c14'=>$arr_f15[13])
 );
 $options = array('xPos'=>'left',
 	'xOrientation'=>'right',

@@ -9,6 +9,7 @@ require("../funciones/verificar_sesion.php");
 <TITLE>Sistema de Seguimiento Tecnico Dimesat</TITLE>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <SCRIPT src="../../js/general.js" type=text/javascript></SCRIPT>
+<script src="../../js/validatechar.js" type=text/javascript></script>
 <link href="../../css/general.css" rel="stylesheet" type="text/css">
 
 <link href="../../css/menu3.css" rel="stylesheet" type="text/css">

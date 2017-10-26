@@ -10,21 +10,29 @@ require("../funciones/verificar_sesion.php");
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <SCRIPT src="../../js/general.js" type=text/javascript></SCRIPT>
 <link href="../../css/general.css" rel="stylesheet" type="text/css">
-<style>
 
-</style>
+<link href="../../css/menu3.css" rel="stylesheet" type="text/css">
+<link href="../../css/base.css" rel="stylesheet" type="text/css">
+
 </HEAD>
-<BODY>
+<body>
 <?php
-require("../../funciones/encabezado.php");
-require("../funciones/menu.php");
+//require("../../funciones/encabezado.php");
+//require("../funciones/menu.php");
+require("../funciones/menu3.php");
 $modulo="seguimiento_tecnico";
 $link_modulo=$modulo.".php";
 $link_modulo_r=$modulo."_r.php";
+?>
+<div id="wrapper"><div id="main"><div class="content">
+<?php
 if (isset($_REQUEST['path'])){
 $path=$_REQUEST['path'];
 include("../../modulos/".$modulo."/".$path);
 }
-require("../../funciones/pie.php"); ?>
-</BODY>
+?>
+</div></div></div>
+<?php require("../../funciones/footer.php"); ?>
+<?php /*require("../../funciones/pie.php"); */?>
+</body>
 </HTML>

@@ -1,0 +1,113 @@
+#wrapper {
+    width:100%;
+    margin:0 auto;
+}
+
+#main {
+	background-color:#fff;
+	padding:15px 0;
+}
+.content {
+    width:95%;
+    /*max-width:2000px;*/
+    margin:0 auto;
+}
+
+
+/* =Top Bar
+-------------------------------------------------------------- */
+#top-bar {
+	background-color: rgb(0, 0, 0);
+}
+#top-bar a, label {
+	color:#fff;
+	font-size:10px;
+	/*text-transform:uppercase;*/
+	display:inline-block;
+	margin:0;
+	padding:10px;
+}
+#top-bar a:hover{
+	background-color:rgb(150,200,250);
+}
+span.all-labs,
+span.back-to-tutorial {
+	display:block;
+	width:50%;
+}
+span.all-labs {
+	float:left;
+	text-align:left;
+}
+span.back-to-tutorial {
+	float:right;
+	text-align:right;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+header {
+	padding:30px 0;
+}
+#title {
+	width:100%;
+	text-align:center;
+}
+#title h1 {
+	color:#fff;
+	font-size: 20px;
+	margin-bottom:10px;
+}
+#title h2 {
+	color:rgb(200,200,200);
+	font-size:20px;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+footer {
+	width:95%;
+	/*padding:10px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin:0 auto;
+	/*border: solid 1px #525252;*/
+	height: 20px;
+	border-top:solid 1px rgb(195, 195, 195);
+}
+
+.footer {
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	/*background-color: #efefef;
+	background-color:rgb(31, 97, 141);*/
+	/*border-top:solid 1px rgb(130, 130, 130);*/
+	text-align: center;
+}
+
+span.footer-left {
+	float:left;
+	text-align:left;
+}
+span.footer-right {
+	float:right;
+	text-align:right;
+}
+
+span.footer-center {
+	text-align:center;
+}
+
+/* =Extras
+-------------------------------------------------------------- */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}

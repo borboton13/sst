@@ -19,6 +19,8 @@ $plan_accion 		= '(NULL)';
 $trabajo_realizado 	= '(NULL)';
 $personal 			= '(NULL)';
 $observaciones 		= '(NULL)';
+$idtipofalla 		= '(NULL)';
+$idestacion 		= '(NULL)';
 
 if($_POST['ticket'] != '')			  { $ticket 			= "'".$_POST['ticket']."'"; }
 if($_POST['idnodo'] != '')			  { $idnodo 			= $_POST['idnodo']; }
@@ -35,6 +37,14 @@ if($_POST['plan_accion'] != '')		  { $plan_accion 		= "'".$_POST['plan_accion'].
 if($_POST['trabajo_realizado'] != '') { $trabajo_realizado 	= "'".$_POST['trabajo_realizado']."'"; }
 if($_POST['personal'] != '') 		  { $personal 			= "'".$_POST['personal']."'"; }
 if($_POST['observaciones'] != '')	  { $observaciones 		= "'".$_POST['observaciones']."'"; }
+if($_POST['tipofalla'] != '')	  	  { $idtipofalla 		= "'".$_POST['tipofalla']."'"; }
+
+$result = mysql_query("SELECT idestacion FROM estacion WHERE nombre=$estacion ");
+//$filas=mysql_num_rows($resultado);
+if(mysql_num_rows($result) != 0){
+    $dato = mysql_fetch_array($result);
+    $idestacion = $dato['idestacion'];
+}
 
 
 if($filas == 1){ // ACTUALIZAR REGISTRO
@@ -53,7 +63,9 @@ if($filas == 1){ // ACTUALIZAR REGISTRO
 								"plan_accion		= $plan_accion," .
 								"trabajo_realizado	= $trabajo_realizado," .
 								"personal			= $personal," .
-								"observaciones		= $observaciones" .
+								"observaciones		= $observaciones," .
+								"idtipofalla		= $idtipofalla," .
+								"idestacion		    = $idestacion " .
 			"WHERE id_st_ticket = $id_st_ticket;";
 	$resultado = mysql_query($sql);
 	if($resultado) {
@@ -65,8 +77,8 @@ if($filas == 1){ // ACTUALIZAR REGISTRO
 }
 
 if($filas == 0){	// NUEVO REGISTRO
-	$sql = "INSERT INTO st_ticket (ticket,   idnodo,   estacion,   fecha_inicio_rif,   hora_inicio_rif,   fecha_fin_rif,   hora_fin_rif,   tipo,   problema,   fecha_not,   hora_not,   plan_accion,   trabajo_realizado,   personal,   observaciones) " .
-	       "VALUES 				($ticket,$idnodo,$estacion,$fecha_inicio_rif,$hora_inicio_rif,$fecha_fin_rif,$hora_fin_rif,$tipo,$problema,$fecha_not,$hora_not,$plan_accion,$trabajo_realizado,$personal,$observaciones);";
+	$sql = "INSERT INTO st_ticket (ticket,idnodo,estacion,fecha_inicio_rif,hora_inicio_rif,fecha_fin_rif,hora_fin_rif,tipo,problema,fecha_not,hora_not,plan_accion,trabajo_realizado,personal,observaciones,idtipofalla,idestacion) " .
+	       "VALUES 				($ticket,$idnodo,$estacion,$fecha_inicio_rif,$hora_inicio_rif,$fecha_fin_rif,$hora_fin_rif,$tipo,$problema,$fecha_not,$hora_not,$plan_accion,$trabajo_realizado,$personal,$observaciones,$idtipofalla,$idestacion);";
 	$resultado = mysql_query($sql);
 	if($resultado) {
 		header("Location: ../../usuarios/modulos/seguimiento_tecnico.php?path=tickets.php");

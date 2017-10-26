@@ -3,7 +3,7 @@ function mostrar_detalles($nro){
 global $link_modulo_r;
 global $adm;
 ?>
-<table width="98%" class="table3" align="center">
+<table width="98%" class="table4" align="center">
 <tr>
 <th width="2%">N&deg;</th>
 <th width="15%">PRODUCTO/SERVICIO</th>			              

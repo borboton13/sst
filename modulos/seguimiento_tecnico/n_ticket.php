@@ -15,20 +15,25 @@
 		overflow:hidden;
 	}
 </style>
-<? 
+<?
+$estacion_val = "";
 $filas = 0;
 if(isset($_GET["rif"])){
 	$id_st_ticket = $_GET["rif"];
-	$consulta = "SELECT id_st_ticket,ticket,idnodo,estacion,fecha_inicio_rif,hora_inicio_rif,fecha_fin_rif,hora_fin_rif,tipo,problema,fecha_not,hora_not,plan_accion,trabajo_realizado,personal,observaciones " .
+	$consulta = "SELECT id_st_ticket,ticket,idnodo,estacion,fecha_inicio_rif,hora_inicio_rif,fecha_fin_rif,hora_fin_rif,tipo,problema,fecha_not,hora_not,plan_accion,trabajo_realizado,personal,observaciones,idtipofalla " .
 			    "FROM st_ticket WHERE id_st_ticket='$id_st_ticket'";
 	$resultado 	= mysql_query($consulta);
 	$filas	   	= mysql_num_rows($resultado);
 	$dato		= mysql_fetch_array($resultado);
+    $estacion_val = $dato['estacion'];
 }
 
+/*if(isset($_GET["idestacion"])){
+    $idestacion = $_GET["idestacion"];
+}*/
 
 ?>
-<table width="600" align="center">
+<table width="700" align="center">
 <tr>
 <td><a class="enlaceboton" href="<?=$link_modulo?>?path=tickets.php" target='_top'>
 	<img src='../../img/ico_detalles.gif' alt='Ver Proyecto' border="0" align="absmiddle"> Ver Lista de Tickets </a>
@@ -49,6 +54,7 @@ if(isset($_GET["rif"])){
 	<tr>
 		<th colspan="2"><strong class="verde">Detalles RIF:</strong></th>
 	</tr>
+
 	<tr>
 		<td width="50%">
 			<div align="right">
@@ -57,7 +63,7 @@ if(isset($_GET["rif"])){
 		  	</div>
 		</td>
 		<td width="50%">
-		  	
+            <div align="center">Escribir y seleccionar SOLO de la lista</div>
 		</td>
 	</tr>
 	
@@ -68,10 +74,19 @@ if(isset($_GET["rif"])){
 			</div>
 		</td>
 		<td width="50%">
-			<div align="right">
+			<!--<div align="right">
 			Estación:
-		  	<input name="estacion" type="text" id="estacion" value="<?=$dato['estacion'];?>" size="28" maxlength="255"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  	</div>
+		  	<input name="estacion" type="text" id="estacion" value="<?/*=$dato['estacion'];*/?>" size="30" maxlength="255"/>&nbsp;&nbsp;
+		  	</div>-->
+            <div align="right">
+                <span class="cafe">ESTACION:</span>
+                <input name="estacion"
+                       type="text"
+                       id="estacion"
+                       value="<? echo $estacion_val; ?>"
+                       onKeyUp="ajax_showOptions(this,'',event,'../../paquetes/autocompletar/search_estaciones.php')" size="30" autocomplete="off" >&nbsp;&nbsp;
+                <input type="hidden" id="idestacion" name="idestacion">
+            </div>
 		</td>
 	</tr>
 	
@@ -79,13 +94,13 @@ if(isset($_GET["rif"])){
 		<td width="50%">
 			<div align="right"><span class="rojo">*</span>Fecha de Inicio:
 			<input name="fecha_inicio_rif" type="text" id="fecha_inicio_rif" size="20" value="<?=$dato['fecha_inicio_rif']?>" onclick="displayCalendar(this,'yyyy-mm-dd',this,false)"/>
-			<img onclick="displayCalendar(document.amper.fecha_inicio_rif,'yyyy-mm-dd hh:ii',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
+			<img onclick="displayCalendar(document.amper.fecha_inicio_rif,'yyyy-mm-dd',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
 			</div>
 		</td>
 		<td width="50%">
 			<div align="right"><span class="rojo">*</span>Hora Inicio:
 			<input name="hora_inicio_rif" type="text" id="hora_inicio_rif" size="15" value="<?=$dato['hora_inicio_rif']?>" />
-			(hh:mm)
+			(hh:mm:ss)
 			</div>
 		</td>
 	</tr>
@@ -93,13 +108,13 @@ if(isset($_GET["rif"])){
 		<td width="50%">
 			<div align="right">Fecha de Fin:
 			<input name="fecha_fin_rif" type="text" id="fecha_fin_rif" size="20" value="<?=$dato['fecha_fin_rif']?>" onclick="displayCalendar(this,'yyyy-mm-dd',this,false)"/>
-			<img onclick="displayCalendar(document.amper.fecha_fin_rif,'yyyy-mm-dd hh:ii',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
+			<img onclick="displayCalendar(document.amper.fecha_fin_rif,'yyyy-mm-dd',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
 			</div>
 		</td>
 		<td width="50%">
 			<div align="right">Hora Fin:
 			<input name="hora_fin_rif" type="text" id="hora_fin_rif" size="15" value="<?=$dato['hora_fin_rif']?>" />
-			(hh:mm)
+			(hh:mm:ss)
 			</div>
 		</td>
 	</tr>
@@ -116,63 +131,84 @@ if(isset($_GET["rif"])){
 		  	</div>
 		</td>
 	</tr>
+
+    <tr>
+        <td width="100%" colspan="2">
+            <div align="center"><span class="rojo">* </span>FALLA:
+                <select name="tipofalla" class="selectbuscar">
+                    <option value="0" selected class="title7"> Seleccionar... </option>
+                    <?php
+                    $res2=mysql_query("SELECT idtipofalla, nombre FROM tipofalla");
+                    while($dato2=mysql_fetch_array($res2)){
+                        $idtipofalla = $dato2['idtipofalla'];
+                        $nombre      = $dato2['nombre'];
+                        echo '<option value="'.$idtipofalla.'" ';
+                        if($idtipofalla==$dato['idtipofalla']) echo 'selected';
+                        echo'>'.$nombre.'</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+        </td>
+    </tr>
+
 </table>
 
 <!-- FIN RIF -->
 
 <table width="100%" border="0" cellpadding="0" cellspacing="2" class="table2">
 <tr>
-<th colspan="2"><strong class="verde">Detalles de NOTIFICACION:</strong></th>
+<th colspan="2"><strong class="verde">NOTIFICACION:</strong></th>
 <tr>
 		<td width="50%">
 			<div align="right"><span class="rojo">*</span>Fecha:
 			<input name="fecha_not" type="text" id="fecha_not" size="20" value="<?=$dato['fecha_not']?>" onclick="displayCalendar(this,'yyyy-mm-dd',this,false)"/>
-			<img onclick="displayCalendar(document.amper.fecha_not,'yyyy-mm-dd hh:ii',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
+			<img onclick="displayCalendar(document.amper.fecha_not,'yyyy-mm-dd',this,false)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
 			</div>
 		</td>
 		<td width="50%">
 			<div align="right"><span class="rojo">*</span>Hora:
 			<input name="hora_not" type="text" id="hora_not" size="15" value="<?=$dato['hora_not']?>" />
-			(hh:mm)
+			(hh:mm:ss)
 			</div>
 		</td>
 </tr>
 </table>
 
 <table width="100%" cellspacing="2" class="table2">
-<tr>
+<!--<tr>
 <th colspan="2"><strong class="verde">Plan de Accion</strong></th>
 </tr>
 <tr>
 <td colspan="2">
-<textarea name="plan_accion" class="resizable" style="width: 596px; height: 40px;" id="plan_accion"><?=$dato['plan_accion']?></textarea>
+<textarea name="plan_accion" class="resizable" style="width: 596px; height: 40px;" id="plan_accion"><?/*=$dato['plan_accion']*/?></textarea>
 </td>
-</tr>
+</tr>-->
 
-<tr>
+<!--<tr>
 <th colspan="2"><strong class="verde">Trabajo Realizado</strong></th>
 </tr>
 <tr>
 <td colspan="2">
-<textarea name="trabajo_realizado" class="resizable" style="width: 596px; height: 40px;" id="trabajo_realizado"><?=$dato['trabajo_realizado']?></textarea>
+<textarea name="trabajo_realizado" class="resizable" style="width: 596px; height: 40px;" id="trabajo_realizado"><?/*=$dato['trabajo_realizado']*/?></textarea>
 </td>
-</tr>
+</tr>-->
 
-<tr>
+<!--<tr>
 <th colspan="2"><strong class="verde">Personal</strong></th>
 </tr>
 <tr>
 <td colspan="2">
-<textarea name="personal" class="resizable" style="width: 596px; height: 40px;" id="personal"><?=$dato['personal']?></textarea>
+<textarea name="personal" class="resizable" style="width: 596px; height: 40px;" id="personal"><?/*=$dato['personal']*/?></textarea>
 </td>
-</tr>
+</tr>-->
 
 <tr>
 <th colspan="2"><strong class="verde">OBSERVACIONES</strong></th>
 </tr>
 <tr>
-<td colspan="2">
-<textarea name="observaciones" class="resizable" style="width: 596px; height: 40px;" id="observaciones"><?=$dato['observaciones']?></textarea>
+<td colspan="2" align="center">
+<textarea name="observaciones" class="resizable" style="width: 650px; height: 80px;" id="observaciones"><?=$dato['observaciones']?></textarea>
 </td>
 </tr>
 
@@ -192,6 +228,10 @@ if(isset($_GET["rif"])){
 </td>
 </tr>
 </table>
+<script type="text/javascript" src="../../paquetes/autocompletar/ajax.js"></script>
+<script type="text/javascript" src="../../paquetes/autocompletar/ajax-dynamic-list.js"></script>
+<link href="../../paquetes/autocompletar/ajax-dynamic-list.css" rel="stylesheet" type="text/css">
+
 <script type="text/javascript" src="../../paquetes/textarea/jquery-latest.js"></script>
 <script type="text/javascript" src="../../paquetes/textarea/jquery.textarearesizer.compressed.js"></script>
 <script type="text/javascript">

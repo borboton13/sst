@@ -9,17 +9,27 @@ require("../funciones/verificar_sesion.php");
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <SCRIPT src="../../js/general.js" type=text/javascript></SCRIPT>
 <link href="../../css/general.css" rel="stylesheet" type="text/css">
+
+<link href="../../css/menu3.css" rel="stylesheet" type="text/css">
+<link href="../../css/base.css" rel="stylesheet" type="text/css">
+
 </HEAD>
 <BODY>
 <?
-require("../../funciones/encabezado.php");
-require("../funciones/menu.php");
+//require("../../funciones/encabezado.php");
+//require("../funciones/menu.php");
+require("../funciones/menu3.php");
 $modulo="clientes";
 $link_modulo=$modulo.".php";
 $link_modulo_r=$modulo."_r.php";
+?>
+<div id="wrapper"><div id="main"><div class="content">
+<?php
 if (isset($_REQUEST['path'])){
 $path=$_REQUEST['path'];
 include("../../modulos/clientes/".$path);
 }
-require("../../funciones/pie.php"); ?>
+?>
+</div></div></div>
+<?php require("../../funciones/footer.php"); ?>
 </BODY></HTML>

@@ -128,10 +128,10 @@ $arr_f04 = explode(';', $arrays[3]);
 
 $data = array(
 	array('c1'=>'', 'c2'=>'Fase 1', 'c3'=>'Fase 2', 'c4'=>'Fase 3', 'c5'=>'Fase 1', 'c6'=>'Fase 2', 'c7'=>'Fase 3'),
-	array('c1'=>$arr_f01[0], 'c2'=>$arr_f01[1], 'c3'=>$arr_f01[2], 'c4'=>$arr_f01[3], 'c5'=>$arr_f01[4], 'c6'=>$arr_f01[3], 'c7'=>$arr_f01[4]),
-	array('c1'=>$arr_f02[0], 'c2'=>$arr_f02[1], 'c3'=>$arr_f02[2], 'c4'=>$arr_f02[3], 'c5'=>$arr_f02[4], 'c6'=>$arr_f02[3], 'c7'=>$arr_f02[4]),
-	array('c1'=>$arr_f03[0], 'c2'=>$arr_f03[1], 'c3'=>$arr_f03[2], 'c4'=>$arr_f03[3], 'c5'=>$arr_f03[4], 'c6'=>$arr_f03[3], 'c7'=>$arr_f03[4]),
-	array('c1'=>$arr_f04[0], 'c2'=>$arr_f04[1], 'c3'=>$arr_f04[2], 'c4'=>$arr_f04[3], 'c5'=>$arr_f04[4], 'c7'=>$arr_f04[3], 'c7'=>$arr_f04[4])
+	array('c1'=>$arr_f01[0], 'c2'=>$arr_f01[1], 'c3'=>$arr_f01[2], 'c4'=>$arr_f01[3], 'c5'=>$arr_f01[4], 'c6'=>$arr_f01[5], 'c7'=>$arr_f01[6]),
+	array('c1'=>$arr_f02[0], 'c2'=>$arr_f02[1], 'c3'=>$arr_f02[2], 'c4'=>$arr_f02[3], 'c5'=>$arr_f02[4], 'c6'=>$arr_f02[5], 'c7'=>$arr_f02[6]),
+	array('c1'=>$arr_f03[0], 'c2'=>$arr_f03[1], 'c3'=>$arr_f03[2], 'c4'=>$arr_f03[3], 'c5'=>$arr_f03[4], 'c6'=>$arr_f03[5], 'c7'=>$arr_f03[6]),
+	array('c1'=>$arr_f04[0], 'c2'=>$arr_f04[1], 'c3'=>$arr_f04[2], 'c4'=>$arr_f04[3], 'c5'=>$arr_f04[4], 'c7'=>$arr_f04[5], 'c7'=>$arr_f04[6])
 );
 $options = array('xPos'=>'left',
 	'xOrientation'=>'right',

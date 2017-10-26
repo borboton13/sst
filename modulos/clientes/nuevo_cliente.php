@@ -1,8 +1,6 @@
 <form name="amper" method="post" action="clientes_r.php" onSubmit=" return VerifyOne ();">
 <input type="hidden" name="path" value="r_cliente.php" />
-<div align="center" class="title">
-ADICIONAR CLIENTE Y CONTACTO 
-</div>
+<div align="center" class="title">Adicionar Cliente y Contacto</div>
 <table width="900" align="center">
 <tr>
 <td width="53%" height="255" valign="top"><table width="450" align="center" class="table2">
@@ -118,7 +116,8 @@ echo "<option>".$dato['sub_grupo']."</option>";
 <tfoot>
 <tr><td colspan="2"><span class="title4">(*) Campos requeridos</span><BR /><center>
 <input name="adicionar_cliente" type="submit" value="Adicionar" />
-<input name="Submit" type="reset" value="Cancelar" />
+<!--<input name="Submit" type="reset" value="Cancelar" />-->
+<input onClick="location.href='<?=$mclientes?>ver_clientes.php'" type="button" value="Cancelar">
 </center></td></tr></tfoot>
 </table>		
 </form>

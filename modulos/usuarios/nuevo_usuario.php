@@ -117,7 +117,8 @@ Int:
 <tfoot>
 <tr><td colspan="2" class="paginado"><span class="rojo">(*) Campos requeridos</span><BR /><center>
 <input name="adicionar_cliente" type="submit" value="Adicionar" />
-<input name="Submit" type="reset" value="Cancelar" />
+<!--<input name="Submit" type="reset" value="Cancelar" />-->
+<input onClick="location.href='<?=$musuarios?>ver_usuarios.php'" type="button" value="Cancelar">
 </center></td></tr></tfoot>
 </table>		
 </form>

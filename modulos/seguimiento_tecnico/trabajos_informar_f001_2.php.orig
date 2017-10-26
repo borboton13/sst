@@ -129,10 +129,16 @@ Llenar Formulario Paso 2 de 3:
 <? 	if($dato['cc'] != ''){
 		echo $dato['cc']; 	
 	}else{
+<<<<<<< HEAD
         echo "Ing. Orlando Rodriguez\nCOORDINADOR O&M ENERGIA ENTEL CBBA\n";
         echo "Ing. Jorge Michel\nCOORDINADOR O&M MOVIL ENTEL CBBA\n\n";
         echo "Ing. Reynaldo Barrios\nCOORDINADOR O&M TRANSMISION ENTEL CBBA\n\n";
 
+=======
+		echo "Ing. Reynaldo Barrios\nCOORDINADOR O&M TRANSMISION ENTEL COCHABAMBA\n\n";
+		echo "Ing. Jorge Michel\nCOORDINADOR O&M MOVIL ENTEL COCHABAMBA\n\n";
+		echo "Ing. Orlando Rodriguez\nCOORDINADOR O&M ENERGIA ENTEL COCHABAMBA\n";
+>>>>>>> devmenu
 	}
 ?>
 </textarea></td>
@@ -198,7 +204,7 @@ isNull( document.amper.trabajo_r) &&
 isNull( document.amper.conclusiones)
 )
 { 
-if(confirm("Esta Guardando esta información y Pasando al Paso 3 de 3."))
+if(confirm("Esta Guardando esta informaci�n y Pasando al Paso 3 de 3."))
 {return true;}
 else {return false;}   
 

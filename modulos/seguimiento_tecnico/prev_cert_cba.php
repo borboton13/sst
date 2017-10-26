@@ -39,7 +39,7 @@
 	</tr>
 	<tr>
 	  <th width="25%">Responsable Cliente:</th>
-	  <td width="75%" class="cafe">Gary Flores Martinez</td>
+	  <td width="75%" class="cafe">Jose Valdez</td>
 	</tr>
 	
 	<tr>

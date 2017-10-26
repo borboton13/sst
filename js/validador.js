@@ -1,5 +1,5 @@
 // JavaScript Document
-<!-- PROPIO DE MARCELO CHAVEZ DURAN
+
 var defaultEmptyOK = false
 
 

@@ -77,10 +77,11 @@ $fecha=substr($fecha,0,10);
 <tr>
 <th width="2%">N&deg;</th>
 <th width="8%">TICKET</th>
-<th width="7%">APERTURA</th>			              
+<th width="7%">APERTURA</th>
+<th width="7%">NOTIFICACION</th>
 <th width="7%">CIERRE</th>
-<th width="7%">DURACION</th>
-<th width="7%">NOTIFICACION</th> 
+<th width="7%">DURAC_APE</th>
+<th width="7%">DURAC_NOT</th>
 <th width="5%">ID NODO</th>
 <th width="20%">ESTACION</th>
 <th width="5%">TIPO</th>
@@ -91,7 +92,7 @@ $fecha=substr($fecha,0,10);
 -->
 </tr>
 <?php
-$consulta = "SELECT id_st_ticket,ticket,idnodo,estacion,fecha_inicio_rif,hora_inicio_rif,fecha_fin_rif,hora_fin_rif,tipo,problema,fecha_not,hora_not,plan_accion,trabajo_realizado,personal,observaciones " .
+$consulta = "SELECT id_st_ticket,ticket,idnodo,estacion,fecha_inicio_rif,hora_inicio_rif,fecha_fin_rif,hora_fin_rif, fecha_not,hora_not, tipo,problema,fecha_not,hora_not,plan_accion,trabajo_realizado,personal,observaciones,idestacion " .
 		    "FROM st_ticket WHERE fecha_inicio_rif='$fecha'"; 
 $resultado = mysql_query($consulta);
 $filas	   = mysql_num_rows($resultado);
@@ -115,19 +116,46 @@ if($filas!=0){
 		$s -= $m*60;
 		
 		if($dato['fecha_fin_rif']){
-			$dif1 = (($d*24)+$h).hrs." ".$m."min";
+			$dif1 = (($d*24)+$h)."hrs"." ".$m."min";
 		}else{
 			$dif1 = '';	
 		}
 		//$dif2= $d.$space.dias." ".$h.hrs." ".$m."min";
 		//$dif3= $d.$space.dias." ".$h.hrs." ".$m."min ".$s."seg";
 		/* ------------------------------------------------------ */
-		
+        $inicio = $dato['fecha_not'].' '.$dato['hora_not'];
+        $fin 	= $dato['fecha_fin_rif'].' '.$dato['hora_fin_rif'];
+        $dif 	= date("H:i", strtotime("00:00:00") + strtotime($fin) - strtotime($inicio));
+
+        $s  = strtotime($fin)-strtotime($inicio);
+        $ss = strtotime($fin)-strtotime($inicio);
+        $d = intval($s/86400);
+        $s -= $d*86400;
+        $h = intval($s/3600);
+        $s -= $h*3600;
+        $m = intval($s/60);
+        $s -= $m*60;
+
+        if($dato['fecha_fin_rif']){
+            $dif2 = (($d*24)+$h).hrs." ".$m."min";
+        }else{
+            $dif2 = '';
+        }
+
+		/* ------------------------------------------------------ */
+
 		if($i%2==0) $rowt="#f1f1f1"; else $rowt="#f6f7f8";
 
 		$rif = $dato['id_st_ticket']; 
+		$idestacion = $dato['idestacion'];
+		$estacion_html = $dato['estacion'];
+
+		if (!isset($dato['idestacion'])){
+		    $estacion_html = "<span class='cafe'>".$dato['estacion']."</span>";
+        }
+
 		if($nively == 1){
-			$ticket_html = "<a href='$link_modulo?path=n_ticket.php&rif=$rif'>".$dato['ticket']."</a>";			
+			$ticket_html = "<a href='$link_modulo?path=n_ticket.php&rif=$rif&idestacion=$idestacion'>".$dato['ticket']."</a>";
 		}else{
 			$ticket_html = $dato['ticket'];
 		}				
@@ -137,11 +165,12 @@ if($filas!=0){
 	<td>".$i."</td>
 	<td><center>$ticket_html</center></td>
 	<td><center>".$dato['fecha_inicio_rif']."<br>".$dato['hora_inicio_rif']."</center></td>
+	<td><center>".$dato['fecha_not']."<br>".$dato['hora_not']."</center></td>
 	<td><center>".$dato['fecha_fin_rif']."<br>".$dato['hora_fin_rif']."</center></td>
 	<td><center>$dif1</center></td>
-	<td><center>".$dato['fecha_not']."<br>".$dato['hora_not']."</center></td>
+	<td><center>$dif2</center></td>
     <td><center>".$dato['idnodo']."</center></td>
-	<td><center>".$dato['estacion']."</center></td>
+	<td><center>".$estacion_html."</center></td>
 	<td><center>".$dato['tipo']."</center></td>
 	<td><center>".$dato['problema']."</center></td>
 	<!--

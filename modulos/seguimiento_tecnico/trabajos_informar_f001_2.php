@@ -116,7 +116,7 @@ Llenar Formulario Paso 2 de 3:
 <?	if($dato['para'] != ''){
 		echo $dato['para'];	
 	}else{
-		echo "Ing. Gary Flores Martinez\nJEFE O&M ENTEL COCHABAMBA\n";
+		echo "Ing. Jose Valdez\nJEFE O&M ENTEL COCHABAMBA\n";
 	}
 ?>
 </textarea></td>
@@ -129,9 +129,9 @@ Llenar Formulario Paso 2 de 3:
 <? 	if($dato['cc'] != ''){
 		echo $dato['cc']; 	
 	}else{
-		echo "Ing. Efrain Palacios\nCOORDINADOR O&M TRANSMISION ENTEL CBBA\n\n";
-		echo "Ing. Victor Hugo Valdez\nCOORDINADOR O&M MOVIL ENTEL CBBA\n\n";
-		echo "Ing. Orlando Rodriguez\nCOORDINADOR O&M ENERGIA ENTEL CBBA\n";
+		echo "Ing. Reynaldo Barrios\nCOORDINADOR O&M TRANSMISION ENTEL COCHABAMBA\n\n";
+		echo "Ing. Jorge Michel\nCOORDINADOR O&M MOVIL ENTEL COCHABAMBA\n\n";
+		echo "Ing. Orlando Rodriguez\nCOORDINADOR O&M ENERGIA ENTEL COCHABAMBA\n";
 	}
 ?>
 </textarea></td>

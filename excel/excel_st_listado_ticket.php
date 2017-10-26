@@ -27,9 +27,10 @@ header("Expires: 0");
 <th>TRABAJO REALIZADO</th>
 <th>PERSONAL</th>
 <th>OBSERVACIONES</th>
+<th>FALLA</th>
 </tr>
 <?	
-	$consulta="SELECT * FROM st_ticket;";
+	$consulta="SELECT * FROM st_ticket s LEFT JOIN tipofalla t ON s.idtipofalla = t.idtipofalla";
 	$resultado=mysql_query($consulta);
 	$filas=mysql_num_rows($resultado);
 	if($filas!=0)
@@ -54,7 +55,8 @@ header("Expires: 0");
 	 $d13 = $dato[13];
 	 $d14 = $dato[14];
 	 $d15 = $dato[15];
-	 	 	 
+	 $d22 = $dato[22];
+
 	 $i++;
 	 
 	 //$dif = date("H:i", strtotime("00:00") + strtotime($d06.' '.$d07) - strtotime($d04.' '.$d05));
@@ -95,7 +97,8 @@ header("Expires: 0");
 	<td>$d13</td>
 	<td>$d14</td>
 	<td>$d15</td>
-	</tr>"; 
+	<td>$d22</td>
+	</tr>";
 	
 	}
 	 

@@ -99,7 +99,7 @@ $opP17_1 = array("..", "SI", "NO");
 		<td width="50%">
 			<input name="p02" type="text" id="p02" size="30" value="<?=$p02?>" />
 			&nbsp;&nbsp;
-			<label for="id_radio">ID Radio Base:</label>
+			<span for="id_radio">ID Radio Base:</span>
 			<input name="p03" type="text" id="p03" size="15" value="<?=$p03?>" />
 		</td>
 	</tr>

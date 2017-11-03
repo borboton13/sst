@@ -70,6 +70,7 @@ $filas	   = mysql_num_rows($resultado);
                 </select>
 
                 <select name="mes" class="selectbuscar">
+                    <option value="11" <?php if($mes=='11') echo"class='naranja' selected"; ?>>Noviembre</option>
                     <option value="10" <?php if($mes=='10') echo"class='naranja' selected"; ?>>Octubre</option>
                     <option value="09" <?php if($mes=='09') echo"class='naranja' selected"; ?>>Septiembre</option>
                     <option value="08" <?php if($mes=='08') echo"class='naranja' selected"; ?>>Agosto</option>

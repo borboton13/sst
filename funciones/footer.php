@@ -15,7 +15,7 @@
     <div align="center">
         <span class="footer-center">
             <img src='../../img/logo14x16.png' alt='pen' align='absmiddle'>
-            &copy; <?=date("Y")?> DIMESAT S.R.L. <br />v1.3.5
+            &copy; <?=date("Y")?> DIMESAT S.R.L. <br />v1.3.6
         </span>
     </div>
 

@@ -70,23 +70,22 @@ $filas	   = mysql_num_rows($resultado);
                 </select>
 
                 <select name="mes" class="selectbuscar">
-                    <option value="11" <?php if($mes=='11') echo"class='naranja' selected"; ?>>Noviembre</option>
-                    <option value="10" <?php if($mes=='10') echo"class='naranja' selected"; ?>>Octubre</option>
-                    <option value="09" <?php if($mes=='09') echo"class='naranja' selected"; ?>>Septiembre</option>
+                    <option value="01" <?php if($mes=='01') echo"class='naranja' selected"; ?>>Enero</option>
+                    <option value="02" <?php if($mes=='02') echo"class='naranja' selected"; ?>>Febrero</option>
+                    <option value="03" <?php if($mes=='03') echo"class='naranja' selected"; ?>>Marzo</option>
+                    <option value="04" <?php if($mes=='04') echo"class='naranja' selected"; ?>>Abril</option>
+                    <option value="05" <?php if($mes=='05') echo"class='naranja' selected"; ?>>Mayo</option>
+                    <option value="06" <?php if($mes=='06') echo"class='naranja' selected"; ?>>Junio</option>
+                    <option value="07" <?php if($mes=='07') echo"class='naranja' selected"; ?>>Julio</option>
                     <option value="08" <?php if($mes=='08') echo"class='naranja' selected"; ?>>Agosto</option>
-                    <option value="07" <?php if($mes==07) echo"class='naranja' selected"; ?>>Julio</option>
-                    <option value="06" <?php if($mes==06) echo"class='naranja' selected"; ?>>Junio</option>
-                    <option value="05" <?php if($mes==05) echo"class='naranja' selected"; ?>>Mayo</option>
-                    <option value="04" <?php if($mes==04) echo"class='naranja' selected"; ?>>Abril</option>
-                    <option value="03" <?php if($mes==03) echo"class='naranja' selected"; ?>>Marzo</option>
-                    <option value="02" <?php if($mes==02) echo"class='naranja' selected"; ?>>Febrero</option>
-                    <option value="01" <?php if($mes==01) echo"class='naranja' selected"; ?>>Enero</option>
-                    <option value="12" <?php if($mes==12) echo"class='naranja' selected"; ?>>Diciembre</option>
-                    <option value="11" <?php if($mes==11) echo"class='naranja' selected"; ?>>Noviembre</option>
-                    <option value="10" <?php if($mes==10) echo"class='naranja' selected"; ?>>Octubre</option>
+                    <option value="09" <?php if($mes=='09') echo"class='naranja' selected"; ?>>Septiembre</option>
+                    <option value="10" <?php if($mes=='10') echo"class='naranja' selected"; ?>>Octubre</option>
+                    <option value="11" <?php if($mes=='11') echo"class='naranja' selected"; ?>>Noviembre</option>
+                    <option value="12" <?php if($mes=='12') echo"class='naranja' selected"; ?>>Diciembre</option>
                 </select>
 
                 <select name="anio" class="selectbuscar">
+                    <option value="2018" <? if($anio==2018) echo"class='naranja' selected"; ?>>2018</option>
                     <option value="2017" <? if($anio==2017) echo"class='naranja' selected"; ?>>2017</option>
                     <option value="2016" <? if($anio==2016) echo"class='naranja' selected"; ?>>2016</option>
                 </select>&nbsp;

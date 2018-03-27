@@ -40,7 +40,7 @@ function Enviar_datos_st(etiqueta){
 		}
 	}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("nro="+nro+"&producto="+producto+"&marca="+marca+"&caracteristicas="+caracteristicas+"&sn="+sn+"&departamento="+departamento+"&ubicacion="+ubicacion);	
+	ajax.send("nro="+nro+"&producto="+producto+"&marca="+marca+"&caracteristicas="+caracteristicas+"&sn="+sn+"&departamento="+departamento+"&ubicacion="+ubicacion);
 }
 
 function Eliminar(etiqueta,id_item,nro,adm){

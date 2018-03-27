@@ -77,7 +77,7 @@
 <SCRIPT src="../../js/epoch_classes.js" type=text/javascript></SCRIPT>
 <LINK href="../../css/epochprime_styles.css" type=text/css rel=stylesheet>
 
-<script src="../../paquetes/nicEdit/nicEdit.js" type="text/javascript"></script>             
+<script src="../../paquetes/nicEdit/nicEdit.js" type="text/javascript"></script>
 <SCRIPT type=text/javascript>
 bkLib.onDomLoaded(function() {
 	new nicEditor({buttonList : ['removeformat','bold','italic','underline','html']}).panelInstance('obs');

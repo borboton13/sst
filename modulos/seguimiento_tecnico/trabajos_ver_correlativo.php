@@ -11,7 +11,7 @@ $pagina = $_GET['pagina'];
 if (isset($_GET['nro_por_pagina'])) $nro_por_pagina = $_GET['nro_por_pagina'];
 else $nro_por_pagina=20;
 
-$sql="SELECT form,nro,DATE_FORMAT(p1,'%d/%m/%Y %H:%i') AS inicio,DATE_FORMAT(hora_salida,'%d/%m/%Y %H:%i') AS solucion,ubicacion,departamento,producto,caracteristicas,funcionario,personal,revision,condicion_final,postm_condicion_final,pasos,id_usuario,id_item,revision_ext,nro_ticket FROM v_correlativo WHERE id_st_proyecto='".$nro."'";
+$sql="SELECT form,nro,DATE_FORMAT(p1,'%d/%m/%Y %H:%i') AS inicio,DATE_FORMAT(hora_salida,'%d/%m/%Y %H:%i') AS solucion,ubicacion,departamento,producto,caracteristicas,funcionario,personal,revision,condicion_final,postm_condicion_final,pasos,id_usuario,id_item,revision_ext,nro_ticket,idestacion FROM v_correlativo WHERE id_st_proyecto='".$nro."'";
 
 $txt="CRITERIO DE BUSQUEDA y/o FILTRADO: ".'<a href="'.$link_modulo.'?path='.$link_actual.'&nro='.$nro.'" class="enlace_s_menu">Ver todos</a> ';
 ////////ubicacion
@@ -125,6 +125,15 @@ FROM (st_proyecto s INNER JOIN clientes c ON s.id_cliente=c.id) INNER JOIN usuar
         <tr>
           <td class="marco"><a class="enlaceboton" href="../../excel/excel_st_listado_correlativo.php?nro=<?=$nro;?>&ordenar_por=<?=$ordenar_por?>&orden=<?=$orden?>&ubicacion=<?=$ubicacion?>&producto=<?=$producto?>&departamento=<?=$departamento?>&caracteristicas=<?=$caracteristicas?>&funcionario=<?=$funcionario?>&tecnico=<?=$tecnico?>&revision=<?=$revision?>&estado=<?=$estado?>" onclick="openNewWindowhtml( this, '800', '590' );return false;"><img src="../../img/excel_ico.gif" alt="Ver Listado en Excel" width="16" height="16" border="0" align="absmiddle" /> Ver Listado en Excel</a></td>
           <td class="marco"><a class="enlaceboton" href="<?=$link_modulo?>?path=trabajos_ver.php&nro=<?=base64_encode($nro);?>"><img src="../../img/informe_detalles.gif" width="16" height="16"  border="0" align="absmiddle" /> Ver por Estacion</a></td>
+          <td class="marco">
+              <!--<a href="<?/*=$link_modulo_r*/?>?path=prev_select_form.php&idevento=<?/*=$idevento*/?>"
+                 class="enlace_s_menu"
+                 onclick="return GB_showCenter('MANTENIMIENTO PREVENTIVO', this.href,182, 700)">
+                 <img src="../../img/informe_detalles.gif" width="16" height="16"  border="0" align="absmiddle" />
+                  Nuevo Mantenimiento
+              </a>-->
+              <input class="btn_dark" onClick="location.href='<?=$mst?>nuevo_correctivo.php&nro=<?=base64_encode($nro);?>'" type="button" value="Nuevo">
+          </td>
         </tr>
       </table></td>
   </tr>
@@ -448,9 +457,29 @@ if($tecnico!="") { $row['personal']=eregi_replace ($tecnico,"<span class='marcar
       <td><div align="center">
         <?=$row['solucion']?>
       </div></td>
-      <td><?
-	  echo"<a href='".$link_modulo_r."?path=trabajos_visitas_ver.php&id_item=".$id_item."' onclick=\"return GB_showCenter('Ver Actividades', this.href,460, 460)\" class='enlace_oculto'><img src='../../img/tarea.gif' alt='Programar Actividades' border=\"0\" align=\"absmiddle\"> ".$row['ubicacion']."</a>";
-	  ?></td>
+        <?php
+
+            if (is_null($row['idestacion'])){
+                $estacion = $row['ubicacion'];
+            }else{
+                $idestacion = $row['idestacion'];
+                $res  = mysql_query("SELECT nombre FROM estacion where idestacion = ".$idestacion);
+                $dato = mysql_fetch_array($res);
+                $estacion = $dato['nombre'];
+            }
+
+
+        ?>
+
+
+      <td><? /*echo"<a href='".$link_modulo_r."?path=trabajos_visitas_ver.php&id_item=".$id_item."' onclick=\"return GB_showCenter('Ver Actividades', this.href,460, 460)\" class='enlace_oculto'>
+	                <img src='../../img/tarea.gif' alt='Programar Actividades' border=\"0\" align=\"absmiddle\"> ".$row['ubicacion']."</a>";
+	        */
+            echo"<a href='".$link_modulo_r."?path=trabajos_visitas_ver.php&id_item=".$id_item."' onclick=\"return GB_showCenter('Ver Actividades', this.href,460, 460)\" class='enlace_oculto'>
+	                <img src='../../img/tarea.gif' alt='Programar Actividades' border=\"0\" align=\"absmiddle\"> ".$estacion."</a>";
+
+          ?>
+      </td>
       <!--<td><?=$row['departamento']?></td>-->
       <td><div align="center">
         <?=$row['producto']?>

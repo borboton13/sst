@@ -1,52 +1,96 @@
 <?php
 require("../../funciones/motor.php");
 
-$resultado=mysql_query("SELECT valor FROM secuencias WHERE id_secuencia='seguimiento_tecnico';");
-$dato=mysql_fetch_array($resultado);
-$str = $dato[0];
-echo $str;
-echo "<br>";
-echo strlen($str);
-echo "<br>";
-echo substr($str, 2);
-$num = (int)substr($str, 2);
-echo "<br>";
-echo $num*100;
-echo "<br>";echo "<br>";
+/*
+note:
+this is just a static test version using a hard-coded countries array.
+normally you would be populating the array out of a database
 
-echo incrementar_nro(3, 'usuarios');
+the returned xml has the following structure
+<results>
+	<rs>foo</rs>
+	<rs>bar</rs>
+</results>
+*/
 
-function incrementar_nro($n, $text){
+$aUsers = array();
+$aInfo = array();
 
-	$nro = '0000100';
-	if($n == 1){ //clientes: C00000
-		$resultado=mysql_query("SELECT valor FROM secuencias WHERE id_secuencia='$text';");
-		$dato=mysql_fetch_array($resultado);
-		$str = $dato[0];
-		$nro = ++$str;
-		
-		//$sqlUpdate = mysql_query("UPDATE secuencias SET valor = '$nro' WHERE id_secuencia='$text';");
-	}
-	
-	if($n == 2){
-		$resultado=mysql_query("SELECT valor FROM secuencias WHERE id_secuencia='$text';");
-		$dato=mysql_fetch_array($resultado);
-		$str = $dato[0];
-		$nro = ++$str;
-		
-		//$sqlUpdate = mysql_query("UPDATE secuencias SET valor = '$nro' WHERE id_secuencia='$text';");
-	}
-	
-	if($n == 3){
-		$resultado=mysql_query("SELECT valor FROM secuencias WHERE id_secuencia='$text';");
-		$dato=mysql_fetch_array($resultado);
-		$str = $dato[0];
-		$nro = ++$str;
-		
-		//$sqlUpdate = mysql_query("UPDATE secuencias SET valor = '$nro' WHERE id_secuencia='$text';");
-	}
-	
-	return $nro;
+$res = mysql_query("select id_st_ticket, ticket, estacion from st_ticket") or die(mysql_error());
+while($inf = mysql_fetch_array($res)){
+    //echo $inf["id_st_ticket"]."###".htmlentities($inf["ticket"])."|";
+    $aUsers [] = $inf["ticket"];
+    $aInfo [] = $inf["estacion"];
 }
+/*
+	$aUsers = array(
+		"Adams, Egbert",
+		"Altman, Alisha",
+		"Archibald, Janna",
+	);
+	*/
+	/*
+	$aInfo = array(
+		"Bedfordshire",
+		"Buckinghamshire",
+		"Cambridgeshire",
+	);
+	*/
+	
+	$input = strtolower( $_GET['input'] );
+	$len = strlen($input);
+	
+	
+	$aResults = array();
+	
+	if ($len)
+	{
+		for ($i=0;$i<count($aUsers);$i++)
+		{
+			// had to use utf_decode, here
+			// not necessary if the results are coming from mysql
+			//
+			if (strtolower(substr(utf8_decode($aUsers[$i]),0,$len)) == $input)
+				$aResults[] = array( "id"=>($i+1) ,"value"=>htmlspecialchars($aUsers[$i]), "info"=>htmlspecialchars($aInfo[$i]) );
+			
+			//if (stripos(utf8_decode($aUsers[$i]), $input) !== false)
+			//	$aResults[] = array( "id"=>($i+1) ,"value"=>htmlspecialchars($aUsers[$i]), "info"=>htmlspecialchars($aInfo[$i]) );
+		}
+	}
+	
+	
+	
+	
+	
+	header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+	header ("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); // always modified
+	header ("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+	header ("Pragma: no-cache"); // HTTP/1.0
+	
+	
+	
+	if (isset($_REQUEST['json']))
+	{
+		header("Content-Type: application/json");
+	
+		echo "{\"results\": [";
+		$arr = array();
+		for ($i=0;$i<count($aResults);$i++)
+		{
+			$arr[] = "{\"id\": \"".$aResults[$i]['id']."\", \"value\": \"".$aResults[$i]['value']."\", \"info\": \"\"}";
+		}
+		echo implode(", ", $arr);
+		echo "]}";
+	}
+	/*else
+	{
+		header("Content-Type: text/xml");
 
+		echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?><results>";
+		for ($i=0;$i<count($aResults);$i++)
+		{
+			echo "<rs id=\"".$aResults[$i]['id']."\" info=\"".$aResults[$i]['info']."\">".$aResults[$i]['value']."</rs>";
+		}
+		echo "</results>";
+	}*/
 ?>

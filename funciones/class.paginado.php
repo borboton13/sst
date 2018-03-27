@@ -342,6 +342,7 @@ class paginado
 		// Primero modificamos el query para averiguar la cantidad total
 		// de registros que devuelve el query.
 		$query_count = eregi_replace("select (.*) from", "SELECT COUNT(*) FROM",$query);
+		//$query_count = preg_replace("/select (.*) from/", "SELECT COUNT(*) FROM",$query);
 		if(!$this->rs( @mysql_query($query_count, $this->conn()) ))
 		{
 			$this->error("Ocurrió un error al ejecutar el query <i><b>\"$query_count\"</b></i>. La base dijo : <b>".mysql_error()."</b>.");

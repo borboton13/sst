@@ -347,7 +347,7 @@ $pdf->ezText("\n",5);
 /** -------------------------------------------------------------------- **/
 $data=array(array('h01'=>'Sector', 'h02'=>'ID Celda', 'h03'=>'Tipo de antena', 'h04'=>'Marca', 'h05'=>'Modelo', 'h06'=>'Azimuth',
 	              'h07'=>'Tilt Mecánico', 'h08'=>'Tilt Eléctrico', 'h09'=>'Ángulo apertura', 'h10'=>'Altura antena(m)',
-				  'h11'=>'Cantidad de TMA', 'h12'=>'Marca TMA', 'h13'=>'Modelo TMA', 'h14'=>'Tiene RET'));
+				  'h11'=>'Cantidad TMA/RRU', 'h12'=>'Marca TMA/RRU', 'h13'=>'Modelo TMA/RRU', 'h14'=>'Tiene RET'));
 $pdf->ezTable($data,'','',
 	array('xPos'=>'left',
 		'xOrientation'=>'right',
@@ -356,7 +356,7 @@ $pdf->ezTable($data,'','',
 		'colGap' => 5,
 		'shaded'=> 1,
 		'showLines'=> 1,
-		'fontSize' => 5,
+		'fontSize' => 4.5,
 		'lineCol' => array(0.48,0.48,0.48),
 		'shadeCol2' => array(0.80,0.80,0.80),
 		'cols'=>array(

@@ -105,21 +105,25 @@ $filas	   = mysql_num_rows($resultado);
     </tr>
 </table>
 
-<table width="98%" align="center" class="table4">
+<table width="100%" align="center" class="table4">
 <!--<caption>CRONOGRAMA CENTRO DE MANTENIMIENTO</caption>-->
-<tr>
-<th width="6%">FECHA</th>
-<th width="15%">GRUPO 1</th>			              
-<th width="15%">GRUPO 2</th>
-<th width="15%">GRUPO 3</th> 
-<th width="15%">GRUPO 4</th>
-<th width="15%">GRUPO 5</th>
-<th width="15%">GRUPO 6</th>
-</tr>
+    <tr>
+        <th width="1%">Fecha</th>
+        <th width="10%">GRUPO 1</th>
+        <th width="10%">GRUPO 2</th>
+        <th width="10%">GRUPO 3</th>
+        <th width="10%">GRUPO 4</th>
+        <th width="10%">GRUPO 5</th>
+        <th width="10%">GRUPO 6</th>
+        <th width="10%">GRUPO 7</th>
+        <th width="10%">GRUPO 8</th>
+        <th width="10%">GRUPO 9</th>
+        <th width="9%">GRUPO 10</th>
+    </tr>
 
 <?php 
 // Columnas (Grupos)
-for ($c=1; $c<=7; $c++){
+for ($c=1; $c<=11; $c++){
 	$a[0][$c]= $c;
 }
 // Filas (Fechas)
@@ -170,7 +174,7 @@ $html_tr = "";
 for ($i=1;$i<=$ultimoDiaMes;$i++){
     //print("<tr>");
     $html_tr .= '<tr onmouseover="setPointer(this, \'#DADADA\')" onmouseout="setPointer(this, \'#FFFFFF\')">';
-    for($j=0;$j<7;$j++) {
+    for($j=0;$j<11;$j++) {
 	    //print("<td>".$a[$i][$j]."</td>");
         $html_tr .= "<td>".$a[$i][$j]."</td>";
     }
@@ -178,15 +182,19 @@ for ($i=1;$i<=$ultimoDiaMes;$i++){
 print $html_tr;
 ?>
 
-<tr>
-<th width="6%">FECHA</th>
-<th width="15%">GRUPO 1</th>			              
-<th width="15%">GRUPO 2</th>
-<th width="15%">GRUPO 3</th> 
-<th width="15%">GRUPO 4</th>
-<th width="15%">GRUPO 5</th>
-<th width="15%">GRUPO 6</th>
-</tr>
+    <tr>
+        <th width="1%">Fecha</th>
+        <th width="10%">GRUPO 1</th>
+        <th width="10%">GRUPO 2</th>
+        <th width="10%">GRUPO 3</th>
+        <th width="10%">GRUPO 4</th>
+        <th width="10%">GRUPO 5</th>
+        <th width="10%">GRUPO 6</th>
+        <th width="10%">GRUPO 7</th>
+        <th width="10%">GRUPO 8</th>
+        <th width="10%">GRUPO 9</th>
+        <th width="9%">GRUPO 10</th>
+    </tr>
 
 </table>
 

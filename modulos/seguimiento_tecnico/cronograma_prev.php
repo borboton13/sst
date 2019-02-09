@@ -85,6 +85,7 @@ $filas	   = mysql_num_rows($resultado);
                 </select>
 
                 <select name="anio" class="selectbuscar">
+                    <option value="2019" <? if($anio==2019) echo"class='naranja' selected"; ?>>2019</option>
                     <option value="2018" <? if($anio==2018) echo"class='naranja' selected"; ?>>2018</option>
                     <option value="2017" <? if($anio==2017) echo"class='naranja' selected"; ?>>2017</option>
                     <option value="2016" <? if($anio==2016) echo"class='naranja' selected"; ?>>2016</option>
@@ -93,6 +94,12 @@ $filas	   = mysql_num_rows($resultado);
                 <? if($admin || $tech){?>
                     <input class="btn_dark" name="nuevoE" type="button" value="Nuevo Evento" onClick="location.href='<?=$link_modulo?>?path=nuevo_evento.php'" />
                 <?php } ?>
+
+                <? if($admin){?>
+                    <input class="btn_dark" name="estacion" type="button" value="Estaciones" onClick="location.href='<?=$link_modulo?>?path=estaciones.php'" />
+                <?php } ?>
+
+
             </form>
         </td>
         <!--<td>|<td/>-->

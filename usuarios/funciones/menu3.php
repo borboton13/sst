@@ -37,5 +37,8 @@ if($nively=='3') $client = true; else $client = false;
     <? } else { ?>
     <a href="#" class="btn">Usuarios</a>
     <? } ?>
+    <? if($admin){ ?>
+        <a href="<?=$mst?>estadisticas.php" class="btn">Estadisticas</a>
+    <? } ?>
     <a href="../../salir.php" class="btn">Cerrar sesion</a>
 </div>

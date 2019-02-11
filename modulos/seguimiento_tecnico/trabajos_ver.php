@@ -34,17 +34,18 @@ FROM (st_proyecto s INNER JOIN clientes c ON s.id_cliente=c.id) INNER JOIN usuar
 	Fecha Inicial: <span class="title6"><?=$fecha_inicio;?></span><br>
 	Fecha final: <span class="title6"><?=$fecha_final;?></span><br>
 	Fecha Registro: <span class="title6"><?=$fecha_registro;?> </span></td>
+    <!--
 	<td width="300" rowspan="2" valign="top" class="marco">
       <form name="amper" method="post" action="../../modulos/seguimiento_tecnico/trabajo_r.php" >
 	  <div align="right">
         <span class="rojo">*</span>Producto/Servicio:
 	    <select name="producto" class="Text_left">
         <option value="0" class="naranja" selected> Seleccionar Producto... </option>
-        <?
+        <?/*
         $resultado=mysql_query("SELECT sub_grupo FROM parametrica WHERE grupo='st_archivo'");
         while($dato=mysql_fetch_array($resultado))
         { echo "<option value='".$dato['sub_grupo']."'>".$dato['sub_grupo']."</option>"; }
-        ?>
+        */?>
         </select>
         <br>
 	    <span class="rojo">*</span>Departamento:
@@ -72,11 +73,12 @@ FROM (st_proyecto s INNER JOIN clientes c ON s.id_cliente=c.id) INNER JOIN usuar
 			<br>
 	        <span class="rojo">*</span>Detalle General:
             <input name="caracteristicas" type="text" class="Text_left" id="caracteristicas" size="25" maxlength="60">
-            <br><input name="nro" type="hidden"  id="nro" value="<?=$nro;?>">
+            <br><input name="nro" type="hidden"  id="nro" value="<?/*=$nro;*/?>">
 	    <input name="adicionar" type="button" id="adicionar" value="Adicionar" onClick=" return VerifyOne ();" >
 	    <div id="cargando"></div>
 	    </div>
 	</form></td>
+    -->
 	</tr>
 	<tr>
 	  <td><table>

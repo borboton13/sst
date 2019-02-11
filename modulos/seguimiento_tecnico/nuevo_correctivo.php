@@ -9,10 +9,14 @@
 <table width="700" align="center" class="table2">
   <tbody>
 	<tr>
-	  <th width="25%">Registrado por:</th>
-	  <td width="75%" class="resaltar"><?=$nombrec;?></td>
+        <th width="25%">Nro:</th>
+	    <td width="75%" class="resaltar"><?=$nro;?></td>
 	</tr>
 
+    <tr>
+        <th width="25%">Registrado por:</th>
+        <td width="75%" class="resaltar"><?=$nombrec;?></td>
+    </tr>
 
 	<tr>
 	    <th>

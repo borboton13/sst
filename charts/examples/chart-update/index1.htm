@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+#container {
+	min-width: 320px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+		</style>
+	</head>
+	<body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/highcharts-more.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+
+<div id="container"></div>
+<button id="plain">Plain</button>
+<button id="inverted">Inverted</button>
+<button id="polar">Polar</button>
+
+
+		<script type="text/javascript">
+
+var chart = Highcharts.chart('container', {
+
+    title: {
+        text: 'Chart.update'
+    },
+
+    subtitle: {
+        text: 'Plain'
+    },
+
+	chart: {
+            inverted: true,
+            polar: false
+        },
+		
+    xAxis: {
+        categories: 
+			['Anzaldo',
+            'Ucuchi',
+            'Curubamba Alta',
+            'Litoral',
+            'Chimore Pueblo',
+            'Villa Santa Fe',
+            'Sacabamba',
+            'Uncia',
+            'Nueva Tacopaya',
+            'Capinota Pueblo',
+            'Epizana',
+            'Majo Pampa',
+            'Mallco Rancho',
+            'Nuevo Quillacollo',
+            'Villa Tunari Machia',
+            'Nodo Pando',
+            'Puntiti',
+            'Taquina',
+            'Villa 14 de Septiembre',
+			'Tetillas',
+            'Pocona',
+            'Pasorapa',
+            'Chapini',
+            'Mariposas',
+            '12 de Octubre',
+            'Micro Pil']
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: [2, 7, 10, 1, 1, 1, 1, 1, 2, 1, 9, 5, 2, 7, 10, 1, 1, 1, 1, 1, 2, 1, 9, 5, 5, 4],
+        showInLegend: false
+    }]
+
+});
+
+
+$('#plain').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: false
+        },
+        subtitle: {
+            text: 'Plain'
+        }
+    });
+});
+
+$('#inverted').click(function () {
+    chart.update({
+        chart: {
+            inverted: true,
+            polar: false
+        },
+        subtitle: {
+            text: 'Inverted'
+        }
+    });
+});
+
+$('#polar').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: true
+        },
+        subtitle: {
+            text: 'Polar'
+        }
+    });
+});
+
+		</script>
+	</body>
+</html>

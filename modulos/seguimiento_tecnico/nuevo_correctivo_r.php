@@ -67,12 +67,10 @@ $e ->HideText(true);
 $e -> SetHeight(56);
 $e->Stroke("ST".strtoupper($pro_key).str_pad($id_st, 4, "0", STR_PAD_LEFT),"../../archivos_st/".$id_st_proyecto."/".$pro_key."_".$id_st."/barcode.png");
 
-
 if($resultado)
     header("Location: ".$link_modulo."?path=trabajos_ver_correlativo.php&nro=".$nro);
 else
     echo "<b>Ocurrio un error, revise bien la información insertada!</b><br>Notifique de este error al administrador del Sistema: ".mysql_error()."<br><a href='javascript:history.back(1);'>[RETORNAR]</a>";
-
 
 ?>
 

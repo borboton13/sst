@@ -57,20 +57,10 @@ $detalles = $caracteristicas;
 $dato_st=mysql_fetch_array(mysql_query("SELECT id_cliente FROM st_proyecto WHERE id_st_proyecto='".$id_st_proyecto."'"));
 $id_cliente = $dato_st["id_cliente"];
 
-if ($producto == "Mantenimiento correctivo"){
-    mysql_query("INSERT INTO st_cronograma_informes_f001 (id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,hora_programada,periodo,p1)
+mysql_query("INSERT INTO st_cronograma_informes_".$pro_key." (id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,hora_programada,periodo,p1)
     VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$hora_p', 1,'$fecha_not')");
-    $id_st = mysql_insert_id();
-    mkdir ("../../archivos_st/".$id_st_proyecto."/".$pro_key."_".$id_st, 0777);
-
-}
-
-if ($producto == "Trabajo Extra"){
-    mysql_query("INSERT INTO st_cronograma_informes_f002 (id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,hora_programada,periodo,p1)
-    VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$hora_p', 1,'$fecha_not')");
-    $id_st = mysql_insert_id();
-    mkdir ("../../archivos_st/".$id_st_proyecto."/".$pro_key."_".$id_st, 0777);
-}
+$id_st = mysql_insert_id();
+mkdir ("../../archivos_st/".$id_st_proyecto."/".$pro_key."_".$id_st, 0777);
 
 $e = BackendFactory::Create(BACKEND_IMAGE,$encoder);
 $e ->HideText(true);

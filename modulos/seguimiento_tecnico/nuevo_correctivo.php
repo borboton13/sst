@@ -139,7 +139,7 @@
 
     <tr><th><span class="rojo">*</span>Fecha Programada:</th>
         <td><input name="fecha" type="text" class="Text_center" id="fecha" size="12"/>
-            <img onclick=calendar.toggle() src="../../img/cal.gif" alt="Seleccionar fecha incial" width="16" height="16">
+            <img onclick=calendarb.toggle() src="../../img/cal.gif" alt="Seleccionar fecha incial" width="16" height="16">
         </td>
     </tr>
     <tr>

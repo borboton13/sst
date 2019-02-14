@@ -116,8 +116,8 @@ if (!is_null($dato_t['idestacion'])){
 	</tr>
 	<tr>
 		<td><span class="rojo">*</span>Estaci&oacute;n:
-		  <!--<input name="ubicacion" type="text" id="ubicacion" value="<?/*=$dato_t['ubicacion'];*/?>" size="41" maxlength="100"/>-->
-            <span class="naranja"><?=$estacion;?></span>
+		  <input name="ubicacion" type="text" id="ubicacion" value="<?=$dato_t['ubicacion'];?>" size="41" maxlength="100"/>
+          <!--  <span class="naranja"><?/*=$estacion;*/?></span>-->
 		</td>
 		<td>
 		  <!--Departamento:<span class="azul"><?/*=$dato_t['departamento'];*/?></span>-->
@@ -150,18 +150,18 @@ if (!is_null($dato_t['idestacion'])){
         <tr>
             <td width="50%">
 
-                <div class="label_div">Type Tickets: </div>
-                <div class="input_container">
+                <span class="label_div">Tickets: </span>
+                <span class="input_container">
                     <input type="text" id="ticket_id" onkeyup="autocomplet()">
                     <ul id="ticket_list_id"></ul>
-                </div>
+                </span>
                 &nbsp;
                 <input type="hidden" id="id_st_ticket" name="id_st_ticket" value="">
                 <input type="button" id="add_ticket" value="+" class="btn_dark" />
 
             </td>
 
-            <td>
+            <td width="50%">
                 <?
                 $output = '';
                 $resultado=mysql_query("SELECT t.id_st_ticket, t.ticket, t.estacion, t.fecha_inicio_rif 

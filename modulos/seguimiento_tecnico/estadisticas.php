@@ -35,19 +35,31 @@ $pagina = $_GET['pagina'];
 		<td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO ENERO 2019</span></td>
 		<td valign='top'>
         <div align='center'>
-            <a title='Ver actas' href='<?=$link_modulo?>?path=est_detalle.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+            <a title='Ver actas' href='<?=$link_modulo?>?path=est_detalle_012019.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
         </div>
 	    </td>
     </tr>
 
     <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>002</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/02/2019</DIV></td>
-        <td><DIV ALIGN='CENTER'>28/02/2019</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO FEBRERO 2019</span></td>
+        <td><DIV ALIGN='CENTER'>01/12/2018</DIV></td>
+        <td><DIV ALIGN='CENTER'>31/12/2018</DIV></td>
+        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO DICIEMBRE 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver actas' href='<?=$link_modulo?>?path=est_detalle.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver actas' href='<?=$link_modulo?>?path=est_detalle_122018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+            </div>
+        </td>
+    </tr>
+
+    <tr height="25" bgcolor="" >
+        <td><DIV ALIGN='CENTER'>003</DIV></td>
+        <td><DIV ALIGN='CENTER'>01/11/2018</DIV></td>
+        <td><DIV ALIGN='CENTER'>30/11/2018</DIV></td>
+        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO NOVIEMBRE 2018</span></td>
+        <td valign='top'>
+            <div align='center'>
+                <a title='Ver actas' href='<?=$link_modulo?>?path=est_detalle_112018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>

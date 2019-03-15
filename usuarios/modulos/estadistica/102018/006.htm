@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'TRANSMISION CM CBBA - POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'Cambio de Azimut en sector 3 tecnología GU',
+            'Enrutamiento IP',
+            'Estación fuera de servicio por corte de cable de FO',
+            'Estación fuera de servicio por falla de MW RTN',
+            'Estación fuera de servicio por falla de OSN3500',
+            'Estación fuera de servicio por falla de tarjeta UPEU',
+            'Estación fuera de servicio por falla de transporte',
+            'Instalación de energía en fuente B de equipo OSN3500',
+            'Micro UMTS  fuera de servicio por corte de cable FO',
+            'Migración de gestión MW RTN950',
+            'MW Ericsson dirección Campo Carrasco fuera de servicio',
+            'Sector 1 o 2 Tecnología 4G y/o GU Fuera de Servicio',
+            'Sustitución de IDU Ceragon',
+            'Sustitución de ODU RTN620 dirección San Salvador',
+            'Sustitución de tarjeta WBBP',
+            'Tecnología GSM por falla de MW ZTE'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [1,	1,	4,	3,	2,	1,	1,	1,	3,	1,	1,	3,	2,	1,	1,	1]
+    }]
+});
+		</script>
+	</body>
+</html>

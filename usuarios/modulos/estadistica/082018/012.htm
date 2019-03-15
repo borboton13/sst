@@ -25,7 +25,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'TICKETS GENERADOS DICIEMBRE 2018'
+        text: 'TICKETS GENERADOS CM CBBA - POR TIPO DE FALLA'
     },
     subtitle: {
         text: ''
@@ -63,13 +63,28 @@ Highcharts.chart('container', {
             "colorByPoint": true,
             "data": [
                 {
-                    "name": "CM CBBA",
-                    "y": 0,
+                    "name": "Estación con Alarma de Corte de Energía",
+                    "y": 3,
                     "drilldown": null
                 },
                 {
-                    "name": "CM ORURO",
-                    "y": 788,
+                    "name": "Estación fuera de servicio por corte de energía",
+                    "y": 569,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación fuera de servicio por falla en la red de suministro comercial",
+                    "y": 27,
+                    "drilldown": null
+                },
+                {
+                    "name": "Sector fuera de servicio por falla de RRU",
+                    "y": 3,
+                    "drilldown": null
+                },
+                {
+                    "name": "Otra Falla",
+                    "y": 8,
                     "drilldown": null
                 }
             ]

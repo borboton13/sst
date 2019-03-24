@@ -34,6 +34,16 @@ $p71 = $_POST["p71"];
 $p8 = $_POST["p8"];
 $p9 = $_POST["p9"];
 
+    $sa01 = "0";
+    $sa02 = "0";
+    $sa03 = "0";
+    $sa04 = "0";
+    if(isset($_POST['sa01'])) $sa01="1";
+    if(isset($_POST['sa02'])) $sa02="1";
+    if(isset($_POST['sa03'])) $sa03="1";
+    if(isset($_POST['sa04'])) $sa04="1";
+
+
 	$consulta="UPDATE st_cronograma_informes_".$pro_key." SET 
 	detalles = '".$detalles."',
 	hora_llegada = '".$time1."',
@@ -56,11 +66,17 @@ $p9 = $_POST["p9"];
 	fecha_apertura = '".$fecha_apertura."',
 	fecha_cierre = '".$fecha_cierre."',
 	fecha_registro=NOW(),
-	pasos = '1' 
+	pasos = '1',
+	sa01 = ".  $sa01 .",
+	sa02 = ".  $sa02 .",
+	sa03 = ".  $sa03 .",
+	sa04 = ".  $sa04 ." 
 	WHERE id_st_cronograma_informes_".$pro_key."='".$id_st_cronograma_informes."'";
 	$resultado=mysql_query($consulta);
+
 	if($resultado) {
 	header("location: ".$link_modulo."?path=trabajos_informar_".$pro_key."_2.php&id_st_cronograma_informes=".$id_st_cronograma_informes);	
 	}
 	else echo"ocurrio un error <hr>$consulta";
+
 ?>

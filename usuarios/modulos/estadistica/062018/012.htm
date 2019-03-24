@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/data.js"></script>
+<script src="../../../../charts/code/modules/drilldown.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 850px; height: 500px; margin: 0 auto"></div>
+
+
+		<script type="text/javascript">
+
+// Create the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'TICKETS GENERADOS CM CBBA - POR TIPO DE FALLA'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Incidencias'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.0f}'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> of total<br/>'
+    },
+
+    "series": [
+        {
+            "name": "Incidencias",
+            "colorByPoint": true,
+            "data": [
+                {
+                    "name": "Estación con Alarma de Corte de Energía",
+                    "y": 49,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación Fuera de Servicio por Corte de Cable de F.O.",
+                    "y": 89,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación Fuera de Servicio por Corte de Energía",
+                    "y": 67,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación Fuera de Servicio por Falla de Enlace MW",
+                    "y": 7,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación Fuera de Servicio por Falla de Enlace Satelital",
+                    "y": 111,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación Fuera de Servicio por Falla en la Red de Suministro",
+                    "y": 139,
+                    "drilldown": null
+                },
+                {
+                    "name": "Sector Fuera de Servicio por Falla de RRU",
+                    "y": 2,
+                    "drilldown": null
+                },
+                {
+                    "name": "Tecnología 4G Fuera de Servicio por Falla de Tarjeta WBBP",
+                    "y": 9,
+                    "drilldown": null
+                },
+                {
+                    "name": "Tecnología GSM Fuera de Servicio por Falla en Tarjeta GTMU",
+                    "y": 3,
+                    "drilldown": null
+                },
+                {
+                    "name": "Otra Falla",
+                    "y": 69,
+                    "drilldown": null
+                }
+            ]
+        }
+    ]
+});
+		</script>
+	</body>
+</html>

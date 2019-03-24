@@ -29,8 +29,10 @@ $id_st_proyecto = $_POST["id_st_proyecto"];
 	$dato_st=mysql_fetch_array(mysql_query("SELECT MAX(periodo) AS periodo FROM st_cronograma_informes_".$pro_key." WHERE id_item='".$id_item."'"));
     $periodo=$dato_st['periodo']+1;
 	
-				if($hora_p!="" && $hora_p!=NULL) mysql_query("INSERT INTO st_cronograma_informes_".$pro_key."(id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,hora_programada,periodo,p1) VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$hora_p','$periodo','$fecha_not')");
-			else mysql_query("INSERT INTO st_cronograma_informes_".$pro_key."(id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,periodo,p1) VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$periodo','$fecha_not')");  
+	if($hora_p!="" && $hora_p!=NULL)
+	    mysql_query("INSERT INTO st_cronograma_informes_".$pro_key."(id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,hora_programada,periodo,p1) VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$hora_p','$periodo','$fecha_not')");
+	else
+	    mysql_query("INSERT INTO st_cronograma_informes_".$pro_key."(id_st_proyecto,id_cliente,id_usuario,detalles,id_item,fecha,periodo,p1) VALUES('$id_st_proyecto','$id_cliente','$tecnico','$detalles',$id_item,'$fecha','$periodo','$fecha_not')");
 		
 			$id_st=mysql_insert_id();
 			mkdir ("../../archivos_st/".$id_st_proyecto."/".$pro_key."_".$id_st, 0777);

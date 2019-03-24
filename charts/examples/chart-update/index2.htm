@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+#container {
+	min-width: 320px;
+	max-width: 900px;
+	height: 800px;
+	margin: 0 auto;
+}
+		</style>
+	</head>
+	<body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/highcharts-more.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+
+<div id="container"></div>
+<button id="plain">Plain</button>
+<button id="inverted">Inverted</button>
+<button id="polar">Polar</button>
+
+
+		<script type="text/javascript">
+
+var chart = Highcharts.chart('container', {
+
+    title: {
+        text: 'Correctivos por tipo de falla'
+    },
+
+    subtitle: {
+        text: 'Plain'
+    },
+
+	chart: {
+            inverted: true,
+            polar: false
+        },
+		
+    xAxis: {
+        categories: [
+			'Fuera de servicio por falla en la red de suministro comercial',
+			'Estación fuera de servicio por corte de energía',
+			'Tecnología GSM fuera de servicio por falla en tarjeta GTMU',
+			'Tecnología 4G fuera de servicio por falla de tarjeta WBBP',
+			'Tecnología LTE fuera de servicio por falla de tarjeta LBBP',
+			'Estación con alarma de corte de energía',
+			'Sector fuera de servicio por falla de SFP',
+			'Sector fuera de servicio por falla de RRU',
+			'Sector fuera de servicio por falla de cable de fibra óptica',
+			'Estación fuera de servicio por falla de Switch',
+			'Estación fuera de servicio por falla de enlace MW',
+			'Estación fuera de servicio  por corte de cable de fibra óptica',
+			'Estación fuera de servicio por falla de enlace satelital',
+			'Otra Falla',
+			]
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: [2, 7, 10, 1, 1, 1, 1, 1, 2, 1, 9, 5, 2, 7],
+        showInLegend: false
+    }]
+
+});
+
+
+$('#plain').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: false
+        },
+        subtitle: {
+            text: 'Plain'
+        }
+    });
+});
+
+$('#inverted').click(function () {
+    chart.update({
+        chart: {
+            inverted: true,
+            polar: false
+        },
+        subtitle: {
+            text: 'Inverted'
+        }
+    });
+});
+
+$('#polar').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: true
+        },
+        subtitle: {
+            text: 'Polar'
+        }
+    });
+});
+
+		</script>
+	</body>
+</html>

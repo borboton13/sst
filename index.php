@@ -1,4 +1,4 @@
-<?
+<?php
 $sw = $_GET["sw"];
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -15,7 +15,7 @@ $sw = $_GET["sw"];
     *{
         box-sizing:border-box;
         -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
+        -webkit-box-sizing:border-box;ç
         font-family:arial;
     }
     body{background:url("img/2252.jpg")#FF9000}
@@ -155,16 +155,15 @@ $sw = $_GET["sw"];
             <h1>Sistema <br />Seguimiento Tecnico</h1>
             <div class="form-group ">
                 <input name="santo" type="text" class="form-control" placeholder="Usuario" id="santo">
-                <!--<input name="santo" type="text" class="form-control" id="santo">-->
                 <i class="fa fa-user"></i>
             </div>
             <div class="form-group log-status">
-                <input name="sena" type="password" class="form-control" placeholder="Contrase&ntilde;a" id="santo">
+                <input name="sena" type="password" class="form-control" placeholder="Contrase&ntilde;a" id="sena">
                 <!--<input name="sena" type="password" class="form-control" id="santo">-->
                 <i class="fa fa-lock"></i>
             </div>
-            <? if($sw==1){ ?> <span class="alert">Credenciales Invalidas</span> <? } ?>
-            <? if($sw==2){ ?> <span class="alert">Error! Su sesi&oacute;nn ha caducado</span> <? } ?>
+            <?php if($sw==1){ ?> <span class="alert">_Credenciales Invalidas</span> <?php } ?>
+            <?php if($sw==2){ ?> <span class="alert"> Error! Su sesi&oacute;n ha caducado</span> <?php } ?>
             <!--<a class="link" href="#">Lost your password?</a>-->
             <button class="log-btn" type="submit">Iniciar Sesi&oacute;n</button>
             <div align="center" class="texto"><br />&copy; 2017 DIMESAT S.R.L.</div>

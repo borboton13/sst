@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/data.js"></script>
+<script src="../../../../charts/code/modules/drilldown.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 500px; margin: 0 auto"></div>
+
+
+		<script type="text/javascript">
+
+// Create the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'TICKETS GENERADOS CM CBBA - POR TIPO DE FALLA'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Incidencias'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.0f}'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> of total<br/>'
+    },
+
+    "series": [
+        {
+            "name": "Incidencias",
+            "colorByPoint": true,
+            "data": [
+                {
+                    "name": "Estación con Alarma de Corte de Energía",
+                    "y": 3,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación fuera de servicio por corte de energía",
+                    "y": 569,
+                    "drilldown": null
+                },
+                {
+                    "name": "Estación fuera de servicio por falla en la red de suministro comercial",
+                    "y": 27,
+                    "drilldown": null
+                },
+                {
+                    "name": "Sector fuera de servicio por falla de RRU",
+                    "y": 3,
+                    "drilldown": null
+                },
+                {
+                    "name": "Otra Falla",
+                    "y": 8,
+                    "drilldown": null
+                }
+            ]
+        }
+    ]
+});
+		</script>
+	</body>
+</html>

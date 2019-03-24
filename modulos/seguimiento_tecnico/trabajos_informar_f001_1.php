@@ -21,7 +21,7 @@ $id_st_cronograma_informes=$_GET["id_st_cronograma_informes"];
 $fecha=date("d/m/Y");
 $pro_key="f001";
 
-$resultado=mysql_query("SELECT
+$resultado=mysql_query("SELECT 
 id_st_proyecto,
 id_item,
 id_cliente,
@@ -42,10 +42,13 @@ p5,
 p6,
 p7,
 p8,
-p9,nro_ticket,id_nodo,fecha_apertura,fecha_cierre,p71
+p9,nro_ticket,id_nodo,fecha_apertura,fecha_cierre,p71,
+sa01, sa02, sa03, sa04
 FROM st_cronograma_informes_".$pro_key."
 WHERE id_st_cronograma_informes_".$pro_key."='".$id_st_cronograma_informes."'");
 $dato=mysql_fetch_array($resultado);
+
+$fecha_prog = $dato['fecha'];
 
 $datox=mysql_fetch_array(mysql_query("SELECT razon_social FROM clientes WHERE id='".$dato['id_cliente']."'"));
 $cliente=$datox['razon_social'];
@@ -54,15 +57,23 @@ $tecnico=$datox['usuario'];
 $datox=mysql_fetch_array(mysql_query("SELECT MAX(periodo) AS de FROM st_cronograma_informes_".$pro_key." WHERE id_item='".$dato['id_item']."'"));
 $de=$datox['de'];
 
-$dato_t=mysql_fetch_array(mysql_query("SELECT departamento,producto,marca,caracteristicas,ubicacion,sn FROM st_trabajos WHERE id_item='".$dato['id_item']."'"));
+$dato_t=mysql_fetch_array(mysql_query("SELECT departamento,producto,marca,caracteristicas,ubicacion,sn,idestacion FROM st_trabajos WHERE id_item='".$dato['id_item']."'"));
+
+$estacion = $dato_t['ubicacion'];
+if (!is_null($dato_t['idestacion'])){
+    $dato_e = mysql_fetch_array(mysql_query("SELECT codigo, nombre FROM estacion WHERE idestacion = ".$dato_t['idestacion']));
+    $estacion = $dato_e['nombre'];
+}
+
 
 
 
 ?>
-<table width="600" align="center">
+<table width="800" align="center">
 <tr>
-<td><a class="enlaceboton" href="<?=$link_modulo?>?path=trabajos_ver_correlativo.php&nro=<?=$dato['id_st_proyecto']?>" target='_top'><img src='../../img/ico_detalles.gif' alt='Ver Proyecto' border="0" align="absmiddle"> Ver Lista de Equipos del Proyecto </a>
-</td></tr>
+    <td><a class="enlaceboton" href="<?=$link_modulo?>?path=trabajos_ver_correlativo.php&nro=<?=$dato['id_st_proyecto']?>" target='_top'><img src='../../img/ico_detalles.gif' alt='Ver Proyecto' border="0" align="absmiddle"> Ver Lista de Equipos del Proyecto </a>
+    </td>
+</tr>
 <tr>
 <td>
 <form name="amper" method="post" action="<?=$link_modulo_r?>" onSubmit=" return VerifyOne ();">
@@ -72,12 +83,10 @@ $dato_t=mysql_fetch_array(mysql_query("SELECT departamento,producto,marca,caract
 <input type="hidden" name="id_item" value="<?=$dato['id_item'];?>" />
 
 <table width="100%" class="table2">
-<caption><span style="font-size:18px">INFORME EMERGENCIAS</span><br />
-Llenar Formulario Paso 1 de 3:
-</caption>
+<caption><span style="font-size:18px">INFORME EMERGENCIAS</span><br />Llenar Formulario Paso 1 de 3:</caption>
 <tr>
 <td width="65%">Proyecto Nro:<span class="title">
-  <?=$dato['id_st_proyecto'];?>
+<?=$dato['id_st_proyecto'];?>
 </span></td>
 <td width="35%" align="right"><span class="medium">INF:</span><span class="medium azul"> <?=strtoupper($pro_key)?><?=str_pad($id_st_cronograma_informes, 4, "0", STR_PAD_LEFT);?></span></td>
 </tr>
@@ -108,71 +117,127 @@ Llenar Formulario Paso 1 de 3:
 	<tr>
 		<td><span class="rojo">*</span>Estaci&oacute;n:
 		  <input name="ubicacion" type="text" id="ubicacion" value="<?=$dato_t['ubicacion'];?>" size="41" maxlength="100"/>
+          <!--  <span class="naranja"><?/*=$estacion;*/?></span>-->
 		</td>
 		<td>
-		  Departamento:<span class="azul"><?=$dato_t['departamento'];?></span>
+		  <!--Departamento:<span class="azul"><?/*=$dato_t['departamento'];*/?></span>-->
 		</td>
 	</tr>
 </table>
 
-<!-- RIF -->
-<table width="100%" class="table2">
-	<tr>
-		<th colspan="2"><strong class="verde">Detalles RIF:</strong></th>
-	</tr>
-	<tr>
-		<td width="50%">
-			<div align="right">
-			Nro de Ticket:
-		  	<input name="nro_ticket" type="text" id="nro_ticket" value="<?=$dato['nro_ticket'];?>" size="20" maxlength="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  	</div>
-		</td>
-		<td></td>
+    <table width="100%" class="table2">
+        <tr>
+            <th colspan="2"><strong class="verde">SERVICIOS AFECTADOS:</strong></th>
+        </tr>
 
-<!--
-		<td width="50%">
-		  	<div align="right">ID Nodo:  
-		    <input name="id_nodo" type="text" id="id_nodo" value="<?=$dato['id_nodo'];?>" size="20" maxlength="6"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td width="50%">
-			<div align="right">
-			<span class="rojo">*</span>Fecha de Apertura:
-			<input name="fecha_apertura" type="text" id="fecha_apertura" size="20" value="<?=$dato['fecha_apertura']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/>
-			<img onclick="displayCalendar(document.amper.fecha_apertura,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha apertura" width="16" height="16">
-			</div>
-		</td>
-		<td width="50%">
-			<div align="right">Fecha de Cierre:
-			<input name="fecha_cierre" type="text" id="fecha_cierre" size="20" value="<?=$dato['fecha_cierre']?>" onclick="displayCalendar(this,'yyyy-mm-dd hh:ii',this,true)"/>
-			<img onclick="displayCalendar(document.amper.fecha_cierre,'yyyy-mm-dd hh:ii',this,true)" src="../../img/time.png" alt="Seleccionar fecha cierre" width="16" height="16">
-			</div>
-		</td>
-	</tr>
--->
-</table>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="checkbox" name="sa01" value="sa01" <? if ($dato['sa01']=='1') echo 'checked'; ?>>GSM</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="sa02" value="sa02" <? if ($dato['sa02']=='1') echo 'checked'; ?>>3G</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="sa03" value="sa03" <? if ($dato['sa03']=='1') echo 'checked'; ?>>4G</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="sa04" value="sa04" <? if ($dato['sa04']=='1') echo 'checked'; ?>>LTE</input>
 
-<!-- FIN RIF -->
+            </td>
+        </tr>
 
-<table width="100%" class="table2">
-<tr>
-<th colspan="2"><strong class="verde">Programacion:</strong></th>
-</tr>
-<tr>
-<td width="25%">Fecha Programada:</td>
-<td><span class="azul"><?=$dato['fecha'];?></span> </td>
-</tr>
-<tr>
-<td width="25%">Hora Programada:</td>
-<td><span class="azul"><?=$dato['h_prog'];?></span> </td>
-</tr>
-<tr>
-<td>Tecnico a Cargo:</td>
-<td><span class="azul"><?=$tecnico;?></span></td>
-</tr>
-</table>
+    </table>
+
+
+    <table width="100%" class="table2">
+        <tr>
+            <th colspan="2"><strong class="verde">Tickets Asociados:</strong></th>
+        </tr>
+        <tr>
+            <td width="50%">
+
+                <span class="label_div">Tickets: </span>
+                <span class="input_container">
+                    <input type="text" id="ticket_id" onkeyup="autocomplet()">
+                    <ul id="ticket_list_id"></ul>
+                </span>
+                &nbsp;
+                <input type="hidden" id="id_st_ticket" name="id_st_ticket" value="">
+                <input type="button" id="add_ticket" value="+" class="btn_dark" />
+
+            </td>
+
+            <td width="50%">
+                <?
+                $output = '';
+                $resultado=mysql_query("SELECT t.id_st_ticket, t.ticket, t.estacion, t.fecha_inicio_rif 
+                                    FROM st_ticket_f001 st join st_ticket t on st.id_st_ticket = t.id_st_ticket
+                                    where st.id_f001 = " . $id_st_cronograma_informes);
+                while($res=mysql_fetch_array($resultado)){
+                    $output .= "<p>" . $res['fecha_inicio_rif'] . " - " . $res['ticket'] . " - " . $res['estacion'] . "</p>";
+                }
+                ?>
+                <div id="show_ticket" style="margin-left:10px;"><?=$output?></div>
+                <div style="text-align: right;">
+                    <input type="button" id="quitar_tickets" value="quitar" class="btn_dark" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <table width="100%" class="table2">
+        <tr>
+            <th colspan="2"><strong class="verde">ESTACIONES AFECTADAS:</strong></th>
+        </tr>
+
+        <tr>
+            <td width="50%" align="center">
+                <select id="estacion" name="estacion" class="Text_left">
+                    <option value="0" class="naranja" selected>Seleccionar...</option>
+                    <?
+                    $resultado=mysql_query("SELECT idestacion, nombre FROM estacion order by nombre;");
+                    while($res=mysql_fetch_array($resultado)){
+                        echo "<option value='".$res['idestacion']."'>".$res['nombre']."</option>";
+                    }
+                    ?>
+                </select>
+                <input type="button" id="adicionar" value="+" class="btn_dark" />
+            </td>
+
+            <?
+            $output_est = '';
+            $resultado = mysql_query("SELECT ea.idestacion, e.nombre, e.codigo, e.provicia 
+                                      FROM estacionafectada ea join estacion e on ea.idestacion = e.idestacion 
+                                      where ea.id_f001 = " . $id_st_cronograma_informes);
+            while($res=mysql_fetch_array($resultado)){
+                $output_est .= "<p>" . $res['codigo'] . " - " . $res['nombre'] . " - " . $res['provicia'] . "</p>";
+            }
+            ?>
+
+            <td width="50%">
+                <div id="show_estacion" style="margin-left:10px;"><?=$output_est?></div>
+
+                <div style="text-align: right;">
+                    <input type="button" id="quitar" value="quitar" class="btn_dark" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <table width="100%" class="table2">
+        <tr>
+            <th colspan="2"><strong class="verde">Programacion:</strong></th>
+        </tr>
+        <tr>
+            <td width="25%">Fecha Programada:</td>
+            <td><span class="azul"><?=$dato['fecha'];?></span> </td>
+        </tr>
+        <tr>
+            <td width="25%">Hora Programada:</td>
+            <td><span class="azul"><?=$dato['h_prog'];?></span> </td>
+        </tr>
+        <tr>
+            <td>Tecnico a Cargo:</td>
+            <td><span class="azul"><?=$tecnico;?></span></td>
+        </tr>
+
+    </table>
 
 <table width="100%" border="0" cellpadding="0" cellspacing="2" class="table2">
 <tr>
@@ -228,17 +293,6 @@ Llenar Formulario Paso 1 de 3:
 </td>
 </tr>
 
-<!--
-<tr>
-<th colspan="2"><strong class="verde"><span class="rojo">*</span>DAÑOS Y PARTES AFECTADAS EN LA ESTACIÓN *</strong></th>
-</tr>
-<tr>
-<td colspan="2">
-<textarea name="p71" class="resizable" style="width: 596px; height: 100px;" id="p71"><?=$dato['p71']?></textarea>
-</td>
-</tr>
--->
-
 <tr>
 <th colspan="2"><strong class="verde">DESCRIPCION DE LA INTERVENCION</strong></th>
 </tr>
@@ -253,16 +307,7 @@ Llenar Formulario Paso 1 de 3:
 <tr>
 <td colspan="2"><textarea name="p9" class="resizable" style="width: 596px; height: 100px;" id="p9"><?=$dato['p9']?></textarea></td>
 </tr>
-<!--
-<tr>
-<th><strong class="verde">DESCRIPCION DE LA INTERVENCION</strong></th>
-<th><strong class="verde">REPUESTOS E INSUMOS UTILIZADOS</strong></th>
-</tr>
-<tr>
-<td valign="top" width="50%"><textarea name="p8" class="resizable" style="width: 295px; height: 100px;" id="p8"><?=$dato['p8']?></textarea></td>
-<TD valign="top" width="50%"><textarea name="p9" class="resizable" style="width: 295px; height: 100px;" id="p9"><?=$dato['p9']?></textarea></TD>
-</tr>
--->
+
 <tr>
 <th colspan="2" height="20" ><strong class="verde">OBSERVACIONES:</strong></th>
 </tr>
@@ -286,36 +331,146 @@ Llenar Formulario Paso 1 de 3:
 </td>
 </tr>
 </table>
+
+<script type="text/javascript" src="../../paquetes/autocompletar/ajax.js"></script>
+<script type="text/javascript" src="../../paquetes/autocompletar/ajax-dynamic-list.js"></script>
+<link href="../../paquetes/autocompletar/ajax-dynamic-list.css" rel="stylesheet" type="text/css">
+
 <script type="text/javascript" src="../../paquetes/textarea/jquery-latest.js"></script>
 <script type="text/javascript" src="../../paquetes/textarea/jquery.textarearesizer.compressed.js"></script>
 <script type="text/javascript">
 	/* jQuery textarea resizer plugin usage */
+	/*
 	$(document).ready(function() {
 		$('textarea.resizable:not(.processed)').TextAreaResizer();
 	});
+	*/
 </script>
 <link type="text/css" rel="stylesheet" href="../../paquetes/calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css?random=20051112" media="screen"></LINK>
-<SCRIPT type="text/javascript" src="../../paquetes/calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js?random=20060118"></script>		
+<SCRIPT type="text/javascript" src="../../paquetes/calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js?random=20060118"></script>
 <SCRIPT src="../../js/validador.js" type=text/javascript></SCRIPT>
+
+<link rel="stylesheet" href="../../css2/style3.css" type="text/css" media="screen" charset="utf-8" />
+
 <script type="text/javascript">
 function VerifyOne () {
-if( checkField( document.amper.detalles, isName, false) &&
-checkField( document.amper.ubicacion, isName, false) &&
-isNull( document.amper.time1) &&
-isNull( document.amper.time2) &&
-isNull( document.amper.p1) &&
-isNull( document.amper.p2) &&
-isNull( document.amper.p3) &&
-validarRB(document.amper.p5,'Seleccione el Tipo de Emergencia!') &&
-validarRB(document.amper.p6,'Seleccione el Servicio Afectado!') &&
-isNull( document.amper.p7)
-)
-{ 
-if(confirm("Esta Guardando esta información y Pasando al Paso 2 de 3."))
-{return true;}
-else {return false;}   
+if( checkField( document.amper.detalles, isName, false)
+    /*&& checkField( document.amper.ubicacion, isName, false) &&*/
+    /*isNull( document.amper.time1) &&
+    isNull( document.amper.time2) &&
+    isNull( document.amper.p1) &&
+    isNull( document.amper.p2) &&
+    isNull( document.amper.p3) &&
+    validarRB(document.amper.p5,'Seleccione el Tipo de Emergencia!') &&
+    validarRB(document.amper.p6,'Seleccione el Servicio Afectado!') &&
+    isNull( document.amper.p7)
+    */
+    ){
 
-}
+    if(confirm("Esta Guardando esta información y Pasando al Paso 2 de 3.")){return true;}
+    else {return false;}
+    }
 else {return false;}   	
 }
 </script>  
+
+<script>
+    $(document).ready(function () {
+        $('#adicionar').click(function () {
+           var estacionId = $('#estacion').val();
+           var id_f001 = <?=$id_st_cronograma_informes;?>;
+
+           $.ajax({
+               url:"add_estacion.php",
+               method:"GET",
+               data:{estacionId:estacionId, id_f001:id_f001},
+               success:function(data){
+                   $('#show_estacion').html(data);
+               }
+           });
+        });
+    });
+
+
+    $(document).ready(function () {
+        $('#quitar').click(function () {
+            var estacionId = -1;
+            var id_f001 = <?=$id_st_cronograma_informes;?>;
+
+            $.ajax({
+                url:"add_estacion.php",
+                method:"GET",
+                data:{estacionId:estacionId, id_f001:id_f001},
+                success:function(data){
+                    $('#show_estacion').html(data);
+                }
+            });
+        });
+    });
+
+    function autocomplet() {
+        var min_length = 4; // min caracters to display the autocomplete
+        var keyword = $('#ticket_id').val();
+        if (keyword.length >= min_length) {
+            $.ajax({
+                url: 'ajax_refresh.php',
+                type: 'POST',
+                data: {keyword:keyword},
+                success:function(data){
+                    $('#ticket_list_id').show();
+                    $('#ticket_list_id').html(data);
+                }
+            });
+        } else {
+            $('#ticket_list_id').hide();
+        }
+    }
+
+    // set_item : this function will be executed when we select an item
+    function set_item(item, id) {
+        // change input value
+        $('#ticket_id').val(item);
+        $('#id_st_ticket').val(id);
+        // hide proposition list
+        $('#ticket_list_id').hide();
+    }
+
+    $(document).ready(function () {
+        $('#add_ticket').click(function () {
+            var id_st_ticket = $('#id_st_ticket').val();
+            var id_f001 = <?=$id_st_cronograma_informes;?>;
+
+            $.ajax({
+                url:"add_ticket.php",
+                method:"GET",
+                data:{id_st_ticket:id_st_ticket, id_f001:id_f001},
+                success:function(data){
+                    $('#show_ticket').html(data);
+                }
+            });
+
+            $('#ticket_id').val('');
+
+        });
+    });
+
+    $(document).ready(function () {
+        $('#quitar_tickets').click(function () {
+            var id_st_ticket = -1;
+            var id_f001 = <?=$id_st_cronograma_informes;?>;
+
+            $.ajax({
+                url:"add_ticket.php",
+                method:"GET",
+                data:{id_st_ticket:id_st_ticket, id_f001:id_f001},
+                success:function(data){
+                    $('#show_ticket').html(data);
+                }
+            });
+
+            $('#ticket_id').val('');
+
+        });
+    });
+
+</script>

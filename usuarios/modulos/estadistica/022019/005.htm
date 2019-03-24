@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'ENERGIA CM CBBA - POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'Estación con alarma de corte de energía',
+            'Estación fuera de servicio por corte de energía',
+            'Estación fuera de servicio por falla de ATS',
+            'Estación fuera de servicio por falla de GGE Power Cube',
+            'Estación fuera de servicio por falla en la red de suministro comercial',
+            'Micro UMTS 2 fuera de servicio por corte de energía',
+            'Micros UMTS 1 y 2 fuera de servicio por corte de energía'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [8,	10,	1,	2,	24,	1,	1]
+    }]
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'TRANSMISION CM CBBA - POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'Atención Correctiva a Enlace Satelital',
+            'Desinstalación de Equipo Satelital',
+            'Estación Fuera de Servicio por Falla de Enlace MW Ericsson',
+            'Instalación de Modem Hughes',
+            'Micro UMTS 1 Fuera de Servicio por Corte de Energía',
+            'Nodo Fuera de Servicio por Atenuación Excesiva',
+            'Nodo Fuera de Servicio por Falla de Fibridge',
+            'Nodo L36 Sin Tonos',
+            'Perdida de Gestión de Equipos de FO',
+            'Perdida de Gestión de MW Ceragon',
+            'Realineamiento de Enlace MW Huawei',
+            'Sector 1 o 2 Tecnología GSM y/o 4G Fuera de Servicio',
+            'Sector 2 Tecnología LTE Fuera de Servicio',
+            'Tecnología GSM Fuera de Servicio por Falla de MW RTN950'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [1,	1,	4,	1,	1,	1,	1,	1,	2,	1,	1,	2,	1,	1,]
+    }]
+});
+		</script>
+	</body>
+</html>

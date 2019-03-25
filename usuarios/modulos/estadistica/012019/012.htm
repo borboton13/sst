@@ -14,7 +14,7 @@
 <script src="../../../../charts/code/modules/data.js"></script>
 <script src="../../../../charts/code/modules/drilldown.js"></script>
 
-<div id="container" style="min-width: 310px; max-width: 700px; height: 500px; margin: 0 auto"></div>
+<div id="container" style="min-width: 310px; max-width: 900px; height: 500px; margin: 0 auto"></div>
 
 
 		<script type="text/javascript">
@@ -25,7 +25,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Mantenimiento Correctivo CM CBBA, por areas'
+        text: 'TICKETS GENERADOS POR TIPO DE FALLA'
     },
     subtitle: {
         text: ''
@@ -63,28 +63,38 @@ Highcharts.chart('container', {
             "colorByPoint": true,
             "data": [
                 {
-                    "name": "Infraestructura",
-                    "y": 0,
+                    "name": "Corte de Energía Programado",
+                    "y": 2,
                     "drilldown": null
                 },
                 {
-                    "name": "BTS",
-                    "y": 5,
+                    "name": "Falla de cable de energía",
+                    "y": 38,
                     "drilldown": null
                 },
                 {
-                    "name": "TX",
-                    "y": 15,
+                    "name": "Falla de panel solar",
+                    "y": 3,
                     "drilldown": null
                 },
                 {
-                    "name": "RBS",
-                    "y": 7,
+                    "name": "Falla en la red de transporte",
+                    "y": 190,
                     "drilldown": null
                 },
                 {
-                    "name": "Energía",
-                    "y": 37,
+                    "name": "Falla en red de suministro comercial",
+                    "y": 380,
+                    "drilldown": null
+                },
+                {
+                    "name": "Falla en sistema de energía",
+                    "y": 1,
+                    "drilldown": null
+                },
+                {
+                    "name": "Falla en TRX / RRU",
+                    "y": 10,
                     "drilldown": null
                 }
             ]

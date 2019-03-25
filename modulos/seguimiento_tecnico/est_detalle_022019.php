@@ -72,35 +72,35 @@ $params = "&anio=$anio&codCentro=$codCentro&ini=$fechaInicio&fin=$fechaFin&idev=
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E04 - MANTENIMIENTO CORRECTIVO POR AREAS - CM CBBA</td><td></td>
+        <td class="cafe">E04 - MANTENIMIENTO CORRECTIVO POR AREAS</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/004.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E05 - ENERGIA CM CBBA - POR SITUACIONES</td><td></td>
+        <td class="cafe">E05 - ENERGIA CM ORU - POR SITUACIONES</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/005.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E06 - TRANSMISION CM CBBA - POR SITUACIONES</td><td></td>
+        <td class="cafe">E06 - TRANSMISION CM ORU - POR SITUACIONES</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/006.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E07 - BTS CM CBBA - POR SITUACIONES</td><td></td>
+        <td class="cafe">E07 - BTS CM ORU - POR SITUACIONES</td><td></td>
         <td align="center">
                 <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/007.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E08 - INTERVENCION A SITIOS CM CBBA</td><td></td>
+        <td class="cafe">E08 - INTERVENCION A SITIOS CM ORU</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/008.htm">VER</a>
         </td>
@@ -114,21 +114,21 @@ $params = "&anio=$anio&codCentro=$codCentro&ini=$fechaInicio&fin=$fechaFin&idev=
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E10 - TICKET GENERADOS CM CBBA - POR TECNOLOGIAS</td><td></td>
+        <td class="cafe">E10 - TICKET GENERADOS CM ORU - POR TECNOLOGIAS</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/010.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E11 - TICKETS GENERADOS CM CBBA - POR TIPO DE PROBLEMA</td><td></td>
+        <td class="cafe">E11 - TICKETS GENERADOS CM ORU - POR TIPO DE PROBLEMA</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/011.htm">VER</a>
         </td>
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E12 - TICKETS GENERADOS CM CBBA - POR TIPO DE FALLA</td><td></td>
+        <td class="cafe">E12 - TICKETS GENERADOS CM ORU - POR TIPO DE FALLA</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/022019/012.htm">VER</a>
         </td>

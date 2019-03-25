@@ -25,27 +25,31 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'ENERGIA CM CBBA - POR SITUACIONES'
+        text: 'ENERGIA POR SITUACIONES'
     }/*,
     subtitle: {
         text: 'CM Cochabamba'
     }*/,
     xAxis: {
         categories: [
-            'Cambio de modulo FAN de puerta',
-            'Dslan fuera de servicio',
-            'Estación con alarma de corte de energía',
-            'Estación con alarma de fuente en MW Huawei',
-            'Estación con alarma de GGE SDMO',
-            'Estación fuera de servicio por corte de energía',
-            'Estación fuera de servicio por falla de ASR920',
-            'Estación fuera de servicio por falla de ATS',
-            'Estación fuera de servicio por falla de batería de arranque',
-            'Estación fuera de servicio por falta de combustible Diesel',
-            'Micro UMTS fuera de servicio por corte de energía',
-            'Modulo FAN de gabinete MTS con falla',
-            'Sustitución de banco de baterías',
-            'Sustitución de PSU'],
+            'BTS fuera de servicio por falla de energía',
+            'Cambio cargador de batería',
+            'Cambio de conexión de energía',
+            'Cambio de medidor y protector de 1er nivel',
+            'Cambio de rectificador PBC Ericsson 2111',
+            'Cambio de térmico de la BTS o APM o Medidor o TDP o Pilastra o ZTE',
+            'Energizado con GGEE portátil',
+            'Energizado del OSN 1800',
+            'Instalación de batería de arranque',
+            'Manteamiento 250Hrs grupo generador',
+            'Seccionado en transformación',
+            'Seccionado en transformación',
+            'Verificación alarmas rectificador nodo de FO',
+            'Verificación de corte o falla de energía en sitio',
+            'Verificación de GGEE y batería de arranque y cargador',
+            'Verificación de medidor',
+            'Verificación de trafo y energizado con GGEE portátil'
+        ],
         title: {
             text: null
         }
@@ -87,7 +91,7 @@ Highcharts.chart('container', {
     series: [{
         name: 'Incidencias',
         colorByPoint: true,
-        data: [1, 1, 4, 1, 1, 34, 1, 1, 1, 1, 1, 1, 1, 1]
+        data: [3,	1,	1,	1,	1,	10,	11,	1,	1,	2,	3,	2,	1,	7,	3,	1,	2]
     }]
 });
 		</script>

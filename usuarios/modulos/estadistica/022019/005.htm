@@ -25,20 +25,30 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'ENERGIA CM CBBA - POR SITUACIONES'
+        text: 'ENERGIA POR SITUACIONES'
     }/*,
     subtitle: {
         text: 'CM Cochabamba'
     }*/,
     xAxis: {
         categories: [
-            'Estación con alarma de corte de energía',
-            'Estación fuera de servicio por corte de energía',
-            'Estación fuera de servicio por falla de ATS',
-            'Estación fuera de servicio por falla de GGE Power Cube',
-            'Estación fuera de servicio por falla en la red de suministro comercial',
-            'Micro UMTS 2 fuera de servicio por corte de energía',
-            'Micros UMTS 1 y 2 fuera de servicio por corte de energía'
+            'BTS fuera de servicio por falla de energía',
+            'Cambio de portafusible',
+            'Cambio de precalentador',
+            'Cambio de térmico',
+            'Encendido del GGEE de forma manual',
+            'Energizado con GGEE portátil',
+            'Habilitación fuente B RTN 950 del rectificador ZTE',
+            'Seccionado en derivación',
+            'Seccionado en transformación',
+            'Térmico principal circuito abierto',
+            'Traslado de 150L de combustible',
+            'Verificación BTS fuera de servicio',
+            'Verificación BTS sin energía',
+            'Verificación falla de energía',
+            'Verificación falla de GGEE',
+            'Verificación falla de MU',
+            'Verificación falla energía fuente B OSN'
         ],
         title: {
             text: null
@@ -81,7 +91,7 @@ Highcharts.chart('container', {
     series: [{
         name: 'Incidencias',
         colorByPoint: true,
-        data: [8,	10,	1,	2,	24,	1,	1]
+        data: [2,	1,	1,	8,	1,	16,	1,	2,	9,	2,	1,	7,	1,	7,	1,	1,	2]
     }]
 });
 		</script>

@@ -25,33 +25,19 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'TRANSMISION CM CBBA - POR SITUACIONES'
+        text: 'TRANSMISION POR SITUACIONES'
     }/*,
     subtitle: {
         text: 'CM Cochabamba'
     }*/,
     xAxis: {
         categories: [
-            'Equipos OSN550 con perdida de gestión',
-            'Estación fuera de servicio por corte de cable FO',
-            'Estación fuera de servicio por falla de ASR920',
-            'Estación fuera de servicio por falla de BBU3910',
-            'Estación fuera de servicio por falla de Modem Gilat',
-            'Estación fuera de servicio por falla de MW Ericsson Mini link',
-            'Estación fuera de servicio por falla de MW Ericsson TN',
-            'Estación fuera de servicio por falla de MW Mini link',
-            'Estación fuera de servicio por falla de MW RTN620',
-            'Estación fuera de servicio por falla de MW RTN950',
-            'Estación fuera de servicio por falla de OSN550',
-            'Micros UMTS fuera de servicio por falla de enrutamiento',
-            'Nodo fuera de servicio',
-            'Primarios sin tono',
-            'Sector 1 tecnología GU fuera de servicio',
-            'Sector 1 tecnología LTE fuera de servicio',
-            'Sector 2 tecnología 4G fuera de servicio',
-            'Sector 3 tecnología LTE fuera de servicio',
-            'Sustitución de tarjeta PIU en OSN550'
-		],
+            'BTS fuera de servicio falla Tx',
+            'Cambio de FO',
+            'Verificación BTS fuera de servicio por problemas de Tx',
+            'Verificación de MW dir Negro Pabellón',
+            'Verificación MW Ericsson'
+        ],
         title: {
             text: null
         }
@@ -93,7 +79,7 @@ Highcharts.chart('container', {
     series: [{
         name: 'Incidencias',
         colorByPoint: true,
-        data: [2, 5, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        data: [1,	1,	1,	1,	1]
     }]
 });
 		</script>

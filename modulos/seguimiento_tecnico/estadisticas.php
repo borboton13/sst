@@ -52,14 +52,14 @@ $pagina = $_GET['pagina'];
 	    </td>
     </tr>
 
-    <!--<tr height="25" bgcolor="" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>122018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/12/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>31/12/2018</DIV></td>
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO DICIEMBRE 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_122018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_122018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>
@@ -71,7 +71,7 @@ $pagina = $_GET['pagina'];
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO NOVIEMBRE 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_112018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_112018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>
@@ -83,12 +83,12 @@ $pagina = $_GET['pagina'];
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO OCTUBRE 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_102018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_102018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>
 
-    <tr height="25" bgcolor="" >
+    <!--<tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>092018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/09/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>30/09/2018</DIV></td>

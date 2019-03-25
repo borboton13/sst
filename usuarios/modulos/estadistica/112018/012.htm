@@ -14,7 +14,7 @@
 <script src="../../../../charts/code/modules/data.js"></script>
 <script src="../../../../charts/code/modules/drilldown.js"></script>
 
-<div id="container" style="min-width: 310px; max-width: 700px; height: 500px; margin: 0 auto"></div>
+<div id="container" style="min-width: 310px; max-width: 900px; height: 500px; margin: 0 auto"></div>
 
 
 		<script type="text/javascript">
@@ -25,7 +25,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Mantenimiento Preventivo'
+        text: 'TICKETS GENERADOS POR TIPO DE FALLA'
     },
     subtitle: {
         text: ''
@@ -63,23 +63,38 @@ Highcharts.chart('container', {
             "colorByPoint": true,
             "data": [
                 {
-                    "name": "CM CBB",
-                    "y": 83,
+                    "name": "Corte de Energía Programado",
+                    "y": 27,
                     "drilldown": null
                 },
                 {
-                    "name": "SCM VT",
-                    "y": 26,
+                    "name": "Falla de Energía en Nodo de Transporte",
+                    "y": 70,
                     "drilldown": null
                 },
                 {
-                    "name": "SCM AIQ",
-                    "y": 4,
+                    "name": "Falla en la red de transporte",
+                    "y": 226,
                     "drilldown": null
                 },
                 {
-                    "name": "CM ORU",
-                    "y": 45,
+                    "name": "Falla en red de suministro comercial",
+                    "y": 327,
+                    "drilldown": null
+                },
+                {
+                    "name": "Falla en sistema de energía",
+                    "y": 1,
+                    "drilldown": null
+                },
+                {
+                    "name": "Falla en TRX / RRU",
+                    "y": 21,
+                    "drilldown": null
+                },
+                {
+                    "name": "TRX / RRU Bloqueada",
+                    "y": 6,
                     "drilldown": null
                 }
             ]

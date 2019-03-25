@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'ENERGIA POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'BTS con alarma de energía',
+            'BTS fuera de servicio por falla de energía',
+            'BTS fuera por corte de energía',
+            'Cambio de cable AC a TDG para conexión directa a térmicos',
+            'Cambio de cable de acometida e instalación de medidor',
+            'Cambio de conexión de cables a fusibles',
+            'Cambio de rectificadores de PBC',
+            'Encendido del GGEE',
+            'Energizado con GGEE portátil ',
+            'Instalación de panel solar',
+            'Mantenimiento 250Hrs Grupo Generador',
+            'Seccionado en derivación',
+            'Seccionado en transformación',
+            'Térmico dañado en TDP',
+            'Trabajo de energía horario ventana',
+            'Traslado de 250L de combustible',
+            'Verificación alarma de energía OSN 9800',
+            'Verificación BTS fuera de servicio',
+            'Verificación corte de energía',
+            'Verificación de grupo generador alarmado',
+            'Verificación energía en sitio',
+            'Verificación falla de energía en la estación',
+            'Verificación PBCs'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [2,	7,	1,	1,	1,	1,	1,	2,	12,	1,	2,	1,	5,	1,	1,	1,	1,	4,	14,	1,	2,	1,	1]
+    }]
+});
+		</script>
+	</body>
+</html>

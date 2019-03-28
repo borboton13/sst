@@ -88,7 +88,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <!--<tr height="25" bgcolor="" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>092018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/09/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>30/09/2018</DIV></td>
@@ -107,7 +107,7 @@ $pagina = $_GET['pagina'];
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO AGOSTO 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_082018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_082018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>
@@ -119,7 +119,7 @@ $pagina = $_GET['pagina'];
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO JULIO 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_072018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_072018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
     </tr>
@@ -131,10 +131,22 @@ $pagina = $_GET['pagina'];
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO JUNIO 2018</span></td>
         <td valign='top'>
             <div align='center'>
-                <a title='Ver estadisticas' href='<?/*=$link_modulo*/?>?path=est_detalle_062018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_062018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
             </div>
         </td>
-    </tr>-->
+    </tr>
+
+    <tr height="25" bgcolor="" >
+        <td><DIV ALIGN='CENTER'>052018</DIV></td>
+        <td><DIV ALIGN='CENTER'>01/05/2018</DIV></td>
+        <td><DIV ALIGN='CENTER'>31/05/2018</DIV></td>
+        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO MAYO 2018</span></td>
+        <td valign='top'>
+            <div align='center'>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_052018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+            </div>
+        </td>
+    </tr>
 
 <tfoot>
 <tr> 

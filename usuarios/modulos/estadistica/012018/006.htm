@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 700px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'TRANSMISION CM CBBA - POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'Fuera de Servicio Falla en la Red de Transporte',
+            'Fuera de Servicio por Corte de Cable de F.O.',
+            'Fuera de Servicio por Falla de BBUD: Corte de Energía',
+            'Fuera de Servicio por Falla de Enrutamiento',
+            'Fuera de Servicio por Falla de Modem Hughes',
+            'Fuera de Servicio por Falla de MW',
+            'Fuera de Servicio por Falla de Switch de Huayllani.',
+            'Estresamiento de F.O.',
+            'Instalación de IDU Ceragon',
+            'Micro UMTS Fuera de Servicio',
+            'Micro UMTS Fuera de Servicio por Corte de Cable F.O.',
+            'MW RTN980 dir Shinahota con Alarma de ODU',
+            'No se tiene Gestión al Metro',
+            'Nodo Fuera de Servicio por Corte de Cable de F.O.',
+            'Reposición de Tarjeta IFH2 en MW RTN620',
+            'RRU Inhibido',
+            'Sector 1 Tecnología 4G Fuera de Servicio',
+            'Sector 1 Tecnología GSM Fuera de Servicio',
+            'Sector 1 Tecnología GSM y 4G Fuera de Servicio',
+            'Sector 2 Tecnología GSM con Falla en DDPU',
+            'Tecnología GSM Fuera de Servicio',
+            'Tecnología GSM Fuera de Servicio Falla de E1'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [2,   2,  1,  2,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1]
+    }]
+});
+		</script>
+	</body>
+</html>

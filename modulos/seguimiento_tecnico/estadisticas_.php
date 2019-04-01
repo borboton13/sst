@@ -28,7 +28,7 @@ $pagina = $_GET['pagina'];
 	<th  width="4%"><div align="center"></div></th>
 	</tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>022019</DIV></td>
         <td><DIV ALIGN='CENTER'>01/02/2019</DIV></td>
         <td><DIV ALIGN='CENTER'>28/02/2019</DIV></td>
@@ -40,7 +40,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>012019</DIV></td>
         <td><DIV ALIGN='CENTER'>01/01/2019</DIV></td>
 		<td><DIV ALIGN='CENTER'>31/01/2019</DIV></td>
@@ -52,7 +52,7 @@ $pagina = $_GET['pagina'];
 	    </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>122018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/12/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>31/12/2018</DIV></td>
@@ -64,7 +64,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>112018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/11/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>30/11/2018</DIV></td>
@@ -76,7 +76,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>102018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/10/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>31/10/2018</DIV></td>
@@ -88,7 +88,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>092018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/09/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>30/09/2018</DIV></td>
@@ -100,7 +100,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>082018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/08/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>31/08/2018</DIV></td>
@@ -112,7 +112,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>072018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/07/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>31/07/2018</DIV></td>
@@ -124,7 +124,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+    <tr height="25" bgcolor="" >
         <td><DIV ALIGN='CENTER'>062018</DIV></td>
         <td><DIV ALIGN='CENTER'>01/06/2018</DIV></td>
         <td><DIV ALIGN='CENTER'>30/06/2018</DIV></td>
@@ -135,61 +135,7 @@ $pagina = $_GET['pagina'];
             </div>
         </td>
     </tr>
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
-        <td><DIV ALIGN='CENTER'>052018</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/05/2018</DIV></td>
-        <td><DIV ALIGN='CENTER'>31/05/2018</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO MAYO 2018</span></td>
-        <td valign='top'>
-            <div align='center'>
-                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_052018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
-            </div>
-        </td>
-    </tr>
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
-        <td><DIV ALIGN='CENTER'>042018</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/04/2018</DIV></td>
-        <td><DIV ALIGN='CENTER'>30/04/2018</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO ABRIL 2018</span></td>
-        <td valign='top'>
-            <div align='center'>
-                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_042018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
-            </div>
-        </td>
-    </tr>
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
-        <td><DIV ALIGN='CENTER'>032018</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/03/2018</DIV></td>
-        <td><DIV ALIGN='CENTER'>31/03/2018</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO MARZO 2018</span></td>
-        <td valign='top'>
-            <div align='center'>
-                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_032018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
-            </div>
-        </td>
-    </tr>
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
-        <td><DIV ALIGN='CENTER'>022018</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/02/2018</DIV></td>
-        <td><DIV ALIGN='CENTER'>28/02/2018</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO FEBRERO 2018</span></td>
-        <td valign='top'>
-            <div align='center'>
-                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_022018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
-            </div>
-        </td>
-    </tr>
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
-        <td><DIV ALIGN='CENTER'>012018</DIV></td>
-        <td><DIV ALIGN='CENTER'>01/01/2018</DIV></td>
-        <td><DIV ALIGN='CENTER'>31/01/2018</DIV></td>
-        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO ENERO 2018</span></td>
-        <td valign='top'>
-            <div align='center'>
-                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_012018.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
-            </div>
-        </td>
-    </tr>
+
 <tfoot>
 <tr> 
 <td colspan="8" class="paginado">

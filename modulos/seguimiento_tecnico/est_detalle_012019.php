@@ -107,7 +107,7 @@ $params = "&anio=$anio&codCentro=$codCentro&ini=$fechaInicio&fin=$fechaFin&idev=
     </tr>
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
-        <td class="cafe">E09 - TICKET GENERADOS ENERO 2019</td><td></td>
+        <td class="cafe">E09 - TICKET GENERADOS 2019</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/012019/009.htm">VER</a>
         </td>

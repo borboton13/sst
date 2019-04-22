@@ -142,7 +142,23 @@ if (!is_null($dato_t['idestacion'])){
 
     </table>
 
+    <!-- RIF -->
+    <table width="100%" class="table2">
+        <tr>
+            <th colspan="2"><strong class="verde">Detalles RIF:</strong></th>
+        </tr>
+        <tr>
+            <td width="50%">
+                <div align="right">
+                    Nro de Ticket:
+                    <input name="nro_ticket" type="text" id="nro_ticket" value="<?=$dato['nro_ticket'];?>" size="20" maxlength="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
 
+    <!-- FIN RIF -->
     <table width="100%" class="table2">
         <tr>
             <th colspan="2"><strong class="verde">Tickets Asociados:</strong></th>

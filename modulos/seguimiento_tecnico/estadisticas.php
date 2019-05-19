@@ -28,7 +28,19 @@ $pagina = $_GET['pagina'];
 	<th  width="4%"><div align="center"></div></th>
 	</tr>
 
-    <tr height="25" bgcolor="" >
+    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
+        <td><DIV ALIGN='CENTER'>042019</DIV></td>
+        <td><DIV ALIGN='CENTER'>01/04/2019</DIV></td>
+        <td><DIV ALIGN='CENTER'>31/04/2019</DIV></td>
+        <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO ABRIL 2019</span></td>
+        <td valign='top'>
+            <div align='center'>
+                <a title='Ver estadisticas' href='<?=$link_modulo?>?path=est_detalle_042019.php'><img src='../../img/ver01.png' alt='Editar Form' vspace='0' border='0' align='absbottom'></a>
+            </div>
+        </td>
+    </tr>
+
+    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
         <td><DIV ALIGN='CENTER'>032019</DIV></td>
         <td><DIV ALIGN='CENTER'>01/03/2019</DIV></td>
         <td><DIV ALIGN='CENTER'>31/03/2019</DIV></td>
@@ -40,7 +52,7 @@ $pagina = $_GET['pagina'];
         </td>
     </tr>
 
-    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
+    <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
         <td><DIV ALIGN='CENTER'>022019</DIV></td>
         <td><DIV ALIGN='CENTER'>01/02/2019</DIV></td>
         <td><DIV ALIGN='CENTER'>28/02/2019</DIV></td>

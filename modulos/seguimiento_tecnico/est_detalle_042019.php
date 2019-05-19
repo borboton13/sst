@@ -134,12 +134,12 @@ $params = "&anio=$anio&codCentro=$codCentro&ini=$fechaInicio&fin=$fechaFin&idev=
         </td>
     </tr>
 
-    <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
+    <!--<tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">
         <td class="cafe">E13 - TICKETS GENERADOS CM CBBA - POR TIPO DE INTERVENCION</td><td></td>
         <td align="center">
             <a class="enlaceboton" href="../../usuarios/modulos/estadistica/042019/013.htm">VER</a>
         </td>
-    </tr>
+    </tr>-->
 
 
     <tr onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')">

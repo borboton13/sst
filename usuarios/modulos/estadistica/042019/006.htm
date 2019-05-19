@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../../../charts/code/highcharts.js"></script>
+<script src="../../../../charts/code/modules/exporting.js"></script>
+<script src="../../../../charts/code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 900px; height: 800px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'TRANSMISION CM CBBA - POR SITUACIONES'
+    }/*,
+    subtitle: {
+        text: 'CM Cochabamba'
+    }*/,
+    xAxis: {
+        categories: [
+            'Estación fuera de servicio por falla de enlace MW Ceragon o MV Ericsson TN o MW RTN950 ',
+            'Estación fuera de servicio por corte de cable de FO',
+            'Estación fuera de servicio por falla de enrutamiento',
+            'Micros UMTS o MU 2 y MU3 fuera de servicio por corte de cable de FO',
+            'Cambio de jumper en sector 2 tecnología 4G',
+            'Enlace MW RTN620 dirección Senda VI degradado',
+            'Equipo de FO con perdida de gestión',
+			'Falla de ODU RTN Huawei dir Nuevo Quillacollo',
+            'Integración de MW Ceragon al sistema de gestión',
+            'MW RTN620 dirección Charapaya TSI sin gestión',
+            'MW RTN620 fuera de servicio',
+            'Sector 1 tecnología GSM con atenuación excesiva',
+            'Sector 2 tecnología 4G fuera de servicio',
+            'Submetro fuera de servicio',
+            'Sustitución de ODU RTN620',
+            'Sustitución de SFP en tarjeta UMPT',
+            'Sustitución de tarjeta EMS6 en IDU RTN620 dirección Toro Toro',
+            'Sustitución de tarjeta IFH2 y ODU RTN600',
+            'Sustitución de tarjeta ISM6 y FAN en equipo MW RTN980',
+            'Tarjeta EMS6 de MW RTN620 dir Toro Toro con falla',
+            'Tecnología 4G fuera de servicio por falla de MW Ceragon'
+        ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Incidencias',
+        colorByPoint: true,
+        data: [8, 2,	2,	2,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1]
+    }]
+});
+		</script>
+	</body>
+</html>

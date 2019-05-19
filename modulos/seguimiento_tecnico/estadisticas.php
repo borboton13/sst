@@ -31,7 +31,7 @@ $pagina = $_GET['pagina'];
     <tr height="25" bgcolor="#f6f7f8" onmouseover="setPointer(this, '#DADADA')" onmouseout="setPointer(this, '#f6f7f8')" >
         <td><DIV ALIGN='CENTER'>042019</DIV></td>
         <td><DIV ALIGN='CENTER'>01/04/2019</DIV></td>
-        <td><DIV ALIGN='CENTER'>31/04/2019</DIV></td>
+        <td><DIV ALIGN='CENTER'>30/04/2019</DIV></td>
         <td align='justify'><span class='small'>ESTADISTICAS DE MANTENIMIENTO ABRIL 2019</span></td>
         <td valign='top'>
             <div align='center'>

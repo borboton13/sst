@@ -25,21 +25,26 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'TRANSMISION POR SITUACIONES'
+        text: 'ENERGIA POR SITUACIONES'
     }/*,
     subtitle: {
         text: 'CM Cochabamba'
     }*/,
     xAxis: {
         categories: [
-            'BTS fuera de servicio por falla de Tx',
-            'Cambio de IDU para Banderani',
-            'Perdida de gestión datos ASANA',
-            'Reset MW Ericsson en Dios es Amor',
-            'Verificación energía OSN 3500 dir Colquiri',
-            'Verificación falla Tx Banderani',
-            'Verificación modem Hugues',
-            'Verificación y pruebas de servicio'
+            'Energizado con GGEE portátil',
+            'Verificación falla de energía en la estación',
+            'Térmico medidor en circuito abierto',
+            'Verificación de falla de energía OSN',
+			'Cambio de térmico de medidor dañado',
+            'Encendido del GGEE',
+            'Micro celda fuera de servicio falla de energía',
+            'Reposición de 8 baterías',
+            'Reposición de térmico APM 30H',
+            'Reposición protector de 2do Nivel',
+            'Soporte para cambio de medidor por personal de ENDE',
+			'Verificación de GGEE no enciende automáticamente',
+            'Verificación falla de GGEE'
         ],
         title: {
             text: null
@@ -82,7 +87,7 @@ Highcharts.chart('container', {
     series: [{
         name: 'Incidencias',
         colorByPoint: true,
-        data: [3,   1,  1,  1,  1,  1,  1,  1]
+        data: [	6, 5, 4, 2, 1, 1,	1,	1,	1,	1,	1,	1, 1]
     }]
 });
 		</script>

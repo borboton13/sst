@@ -12,11 +12,12 @@ $pagina = $_GET['pagina'];
 <tr>
     <td colspan="3" class="paginado">
         <div align="left">
+            <input class="btn_dark" name="estacion" type="button" value="Indicadores de Tiempo" onClick="location.href='<?=$link_modulo?>?path=indicadores.php'" />
         </div>
     </td>
     <td colspan="5" class="paginado">
         <div align="right">
-            <input class="btn_dark" type="button" value="Nuevo">
+            <!--<input class="btn_dark" type="button" value="Nuevo">-->
         </div>
     </td>
 </tr>			        

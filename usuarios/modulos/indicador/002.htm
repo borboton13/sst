@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mantenimiento DIMESAT S.R.L.</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+
+<script src="../../../charts/code/highcharts.js"></script>
+<script src="../../../charts/code/modules/data.js"></script>
+<script src="../../../charts/code/modules/drilldown.js"></script>
+
+<!--<div id="container" style="min-width: 310px; max-width: 700px; height: 500px; margin: 0 auto"></div>-->
+<div id="container" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+    // Data gathered from http://populationpyramid.net/germany/2015/
+
+    // Age categories
+    var categories = [
+        '>100',
+        '>90 ; <=100',
+        '>80 ; <=90',
+        '>70 ; <=80',
+        '>60 ; <=70',
+        '>50 ; <=60',
+        '>40 ; <=50',
+        '>30 ; <=40',
+        '>20 ; <=30',
+        '>10 ; <=20',
+        '> 5 ; <=10',
+        '> 4 ; <= 5',
+        '> 3 ; <= 4',
+        '> 2 ; <= 3',
+        '> 1 ; <= 2',
+        '<=1'
+    ];
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'INDICADOR, TIEMPO DE CIERRE DE TICKETS CON CORTE'
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: [{
+
+            title: {
+                text: 'Horas'
+            },
+
+            categories: categories,
+            reversed: false,
+            labels: {
+                step: 1
+            }
+        }, { // mirror axis on right side
+            opposite: true,
+            reversed: false,
+            categories: categories,
+            linkedTo: 0,
+            labels: {
+                step: 1
+            }
+        }],
+        yAxis: {
+            title: {
+                text: null
+            },
+            labels: {
+                formatter: function () {
+                    return Math.abs(this.value) + '';
+                }
+            }
+        },
+
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + ', hrs: ' + this.point.category + '</b><br/>' +
+                    'Cantidad: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+            }
+        },
+
+        series: [{
+            name: 'Tickets',
+            data: [
+                6,
+                2,
+                0,
+                0,
+                0,
+                1,
+                8,
+                3,
+                29,
+                154,
+                100,
+                24,
+                27,
+                44,
+                63,
+                64
+            ]
+        }]
+    });
+
+</script>
+
+	</body>
+</html>

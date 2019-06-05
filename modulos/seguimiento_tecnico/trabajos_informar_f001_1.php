@@ -159,6 +159,7 @@ if (!is_null($dato_t['idestacion'])){
     </table>
 
     <!-- FIN RIF -->
+    <!--
     <table width="100%" class="table2">
         <tr>
             <th colspan="2"><strong class="verde">Tickets Asociados:</strong></th>
@@ -194,8 +195,8 @@ if (!is_null($dato_t['idestacion'])){
             </td>
         </tr>
     </table>
-
-
+    -->
+    <!--
     <table width="100%" class="table2">
         <tr>
             <th colspan="2"><strong class="verde">ESTACIONES AFECTADAS:</strong></th>
@@ -234,7 +235,7 @@ if (!is_null($dato_t['idestacion'])){
             </td>
         </tr>
     </table>
-
+    -->
 
     <table width="100%" class="table2">
         <tr>
